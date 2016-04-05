@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby '2.2.2'
 
 gem 'devise'
 gem 'react-rails'
