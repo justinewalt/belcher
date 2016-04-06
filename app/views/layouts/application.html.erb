@@ -5,13 +5,32 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400"/>
 </head>
 <body>
+  <div class="nav-bar">
+    <img class="icon" src='http://www.clipartbest.com/cliparts/9cp/oq6/9cpoq6rRi.png' />
+    <h2 class="logo"><%= link_to 'Belcher', root_path %></h2>
+    <% if user_signed_in? %>
+      <p class="nav-link"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></p>
+      <p class="nav-link"><%= link_to 'Preferences' %></p>
+      <p class="nav-link"><%= link_to 'Profile' %></p>
+    <% else %>
+      <p class="nav-link"><%= link_to 'Sign Up', new_user_registration_path %></p>
+      <p class="nav-link"><%= link_to 'Log In', new_user_session_path %></p>
+      <p class="hamburger"><a><i class="fa fa-bars fa-3x ham-icon"></i></a>
+    <% end %>
+  </div>
+<% if alert %>
+  <p class="flash alert"><%= alert %></p>  
+<% end %>
+<% if notice %>
+  <p class="flash notice"><%= notice %></p>
+<% end %>
 
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
-	
 <%= yield %>
 
 </body>
 </html>
+
+
