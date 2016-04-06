@@ -79,6 +79,15 @@ a {
 }
 
 //Responsive Design
+@media (min-width: 20px) and (max-width: 319px){
+  .nav-link {
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+}
+
 @media (min-width: 320px) and (max-width: 699px){
   .nav-link {
     display: none;
