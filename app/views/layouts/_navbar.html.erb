@@ -1,13 +1,13 @@
-<nav class="navbar">
-  <div class="navbarcontent">
-    <div class="icon">
-      <img src='http://www.clipartbest.com/cliparts/9cp/oq6/9cpoq6rRi.png' />
-    </div>
-    <div class="navlink">
-      <ul> 
-        <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-        <li><%= link_to 'Log In', new_user_session_path %></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<div class="nav-bar">
+  <img class="icon" src='http://www.clipartbest.com/cliparts/9cp/oq6/9cpoq6rRi.png' />
+  <h2 class="logo"><%= link_to 'Belcher', root_path %></h2>
+  <% if user_signed_in? %>
+    <p class="nav-link"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></p>
+    <p class="nav-link"><%= link_to 'Preferences' %></p>
+    <p class="nav-link"><%= link_to 'Profile' %></p>
+  <% else %>
+    <p class="nav-link"><%= link_to 'Sign Up', new_user_registration_path %></p>
+    <p class="nav-link"><%= link_to 'Log In', new_user_session_path %></p>
+    <p class="hamburger"><a><i class="fa fa-bars fa-3x ham-icon"></i></a>
+  <% end %>
+</div>
