@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'google_places'
 gem 'devise'
 gem 'react-rails'
 gem 'rails', '4.2.5.2'
