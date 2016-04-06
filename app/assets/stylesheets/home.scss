@@ -66,7 +66,7 @@ a {
   height: 3em;
   margin: 10px 3% 0 3%;
   color: white;
-  float: right;
+  float: left;
 }
 
 .hamburger {
@@ -96,7 +96,7 @@ a {
 
 @media (min-width: 700px){
   .ham-icon {
-    visibility: hidden;
+    visibility: visible;
   }
   .nav-link {
     visibility: visible;
@@ -105,7 +105,7 @@ a {
 
 @media (min-width: 1100px){
   .ham-icon {
-    visibility: hidden;
+    visibility: visible;
   }
   .nav-link {
     visibility: visible;
