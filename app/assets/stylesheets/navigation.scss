@@ -1,0 +1,29 @@
+.icon {
+  float: left;
+  height: 3em;
+  margin: 10px 1% 0 1%;
+}
+.nav-bar {
+  height: 4.5em;
+  width: 100%;
+  background-color: #9e0f00 ;
+  box-shadow: 0 .5px 1em #222 ;
+}
+
+.logo {
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  border-bottom: 0;
+  margin: 0;
+  float: left;
+  cursor: pointer;
+}
+
+.nav-link {
+  color: white;
+  float: right;
+  margin: 1% 2% 0 0;
+  font-size: 20px;
+  cursor: pointer;
+}
