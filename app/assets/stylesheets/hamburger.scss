@@ -1,26 +1,26 @@
+.hamburger-menu {
+  background-color: #9e0f00 ;
+  position: absolute;
+  height: 100vh;
+}
+
 .ham-icon {
-  height: 3em;
-  margin: 10px 3% 0 3%;
+  height: 1em;
+  margin: 10px 1% 0 2%;
   color: white;
   float: left;
 }
 
 .hamburger {
+  display: inline;
 }
 
-.hamburger:hover {
+.ham-icon:hover{
   cursor: pointer;
-  color: blue;
-}
-
-.hamburger-menu {
-  height: 100%;
-  width: 20%;
-  background-color: #9e0f00;
-  box-shadow: 0 .5px 1em #222 ;
-
+  color: #33C3F0;
 }
 
 .hamburger-content {
-
+  font-size: 2em;
+  margin-left: 20%;
 }
