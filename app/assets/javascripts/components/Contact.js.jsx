@@ -5,7 +5,7 @@ class Contact extends React.Component {
 
   render() {
     return (
-      <div className="twelve columns">
+      <div className="twelve columns text-center">
       <hr />
         <h3 className="text-center">Contact</h3>
         <p>This is the Contact info paragraph</p>

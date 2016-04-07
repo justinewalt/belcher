@@ -9,7 +9,7 @@ class Index extends React.Component {
       <div>
         <About />
         <Contact />
-        <Hamburger />
+        <Profile />
       </div>
     );
   }
