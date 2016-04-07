@@ -6,8 +6,8 @@ class Contact extends React.Component {
   render() {
     return (
       <div className="twelve columns">
+      <hr />
         <h3 className="text-center">Contact</h3>
-        <hr />
         <p>This is the Contact info paragraph</p>
          <form>
           <input type="email" placeholder="Your Email Address" required={true} />
