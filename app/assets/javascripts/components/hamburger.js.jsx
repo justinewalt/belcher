@@ -12,10 +12,12 @@ class Hamburger extends React.Component {
   menu(){
     if (this.state.isOpen) {
       return(<div className="hamburger-menu">
-                <p>Profile</p>
-                <p>Preferences</p>
-                <p>About</p>
-                <p>Contact Us</p>
+                <div className="hamburger-content">
+                  <p>Profile</p>
+                  <p>Preferences</p>
+                  <p>About</p>
+                  <p>Contact Us</p>
+                </div>
              </div>
             );
     }
