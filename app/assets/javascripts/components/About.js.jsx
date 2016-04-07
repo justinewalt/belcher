@@ -11,27 +11,27 @@ class About extends React.Component {
         <div className="text-center">
           <div className="about-info three columns">
             <h4>Justin</h4>
-              <i className="contact-fa fa fa-twitter"></i>
+              <i className="contact-fa fa fa-github"></i>
               <i className="contact-fa fa fa-linkedin-square"></i>
-              <i className="contact-fa fa fa-facebook-official"></i>
+              <i className="contact-fa fa fa-chrome"></i>
             </div>
           <div className="about-info three columns">
             <h4>Gavyn</h4>
-              <i className="contact-fa fa fa-twitter"></i>
+              <i className="contact-fa fa fa-github"></i>
               <i className="contact-fa fa fa-linkedin-square"></i>
-              <i className="contact-fa fa fa-facebook-official"></i>
+              <i className="contact-fa fa fa-chrome"></i>
             </div>
           <div className="about-info three columns">
             <h4>Brandon</h4>
-              <i className="contact-fa fa fa-twitter"></i>
+              <i className="contact-fa fa fa-github"></i>
               <i className="contact-fa fa fa-linkedin-square"></i>
-              <i className="contact-fa fa fa-facebook-official"></i>
+              <i className="contact-fa fa fa-chrome"></i>
             </div>
           <div className="about-info three columns">
             <h4>Garrett</h4>
-              <i className="contact-fa fa fa-twitter"></i>
+              <i className="contact-fa fa fa-github"></i>
               <i className="contact-fa fa fa-linkedin-square"></i>
-              <i className="contact-fa fa fa-facebook-official"></i>
+              <i className="contact-fa fa fa-chrome"></i>
           </div>
         </div>
       </div>
