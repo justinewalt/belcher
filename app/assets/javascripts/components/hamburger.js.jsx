@@ -17,7 +17,7 @@ class Hamburger extends React.Component {
                 <p>About</p>
                 <p>Contact Us</p>
              </div>
-            )
+            );
     }
   }
 
