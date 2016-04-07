@@ -8,6 +8,7 @@ class Index extends React.Component {
       <div>
         <About />
         <Contact />
+        <Hamburger />
       </div>
     );
   }
