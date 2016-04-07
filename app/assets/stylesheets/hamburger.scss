@@ -6,10 +6,20 @@
 }
 
 .hamburger {
-  display: inline;
 }
 
-.hamburger:hover{
+.hamburger:hover {
   cursor: pointer;
   color: blue;
+}
+
+.hamburger-menu {
+  height: 100%;
+  width: 20%;
+  background-color: #9e0f00;
+  padding-top: 10em;
+}
+
+.hamburger-content {
+
 }
