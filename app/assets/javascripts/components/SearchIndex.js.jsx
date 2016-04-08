@@ -11,7 +11,7 @@ class SearchIndex extends React.Component {
             <p>Find Me Food</p>
           </div>
           <div className="twelve columns">
-            <input className="search-index-input" type="text" placeholder="Food Type or Restaurant Nsme" />
+            <input className="search-index-input" type="text" placeholder="Food Type or Restaurant Nsme (Optional)" />
           </div>
           <div className="search-index-buttons price-button twelve columns">
             <button>$</button>
