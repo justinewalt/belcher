@@ -21,8 +21,10 @@ class About extends React.Component {
             <p>Enjoy!</p>
           </div>
         <div className="text-center">
+          <h3>Creators</h3>
           <div className="about-info three columns">
-            <h4>Justin</h4>
+            <h4 className="about-first">Justin</h4>
+            <h6 className="about-last">Ewalt</h6>
               <a href="" target="_blank">
                <i className="contact-fa fa fa-github"></i></a>
               <a href="" target="_blank">
@@ -31,7 +33,8 @@ class About extends React.Component {
                <i className="contact-fa fa fa-globe"></i></a>
             </div>
           <div className="about-info three columns">
-            <h4>Gavyn</h4>
+            <h4 className="about-first">Brandon</h4>
+            <h6 className="about-last">Huynh</h6>
               <a href="" target="_blank">
                <i className="contact-fa fa fa-github"></i></a>
               <a href="" target="_blank">
@@ -40,7 +43,8 @@ class About extends React.Component {
                <i className="contact-fa fa fa-globe"></i></a>
             </div>
           <div className="about-info three columns">
-            <h4>Brandon</h4>
+            <h4 className="about-first">Gavyn</h4>
+            <h6 className="about-last">Caldwell</h6>
               <a href="" target="_blank">
                <i className="contact-fa fa fa-github"></i></a>
               <a href="" target="_blank">
@@ -49,10 +53,11 @@ class About extends React.Component {
                <i className="contact-fa fa fa-globe"></i></a>
             </div>
           <div className="about-info three columns">
-            <h4>Garrett</h4>
-              <a href="" target="_blank">
+            <h4 className="about-first">Garrett</h4>
+            <h6 className="about-last">Stott</h6>
+              <a href="https://github.com/garrettstott" target="_blank">
                <i className="contact-fa fa fa-github"></i></a>
-              <a href="" target="_blank">
+              <a href="https://www.linkedin.com/in/garrett-stott-4262b1104" target="_blank">
                <i className="contact-fa fa fa-linkedin-square"></i></a>
               <a href="https://garrettstott.herokuapp.com/" target="_blank">
                <i className="contact-fa fa fa-globe"></i></a>
