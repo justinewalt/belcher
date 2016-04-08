@@ -25,12 +25,11 @@ class About extends React.Component {
           <div className="about-info three columns">
             <h4 className="about-first">Justin</h4>
             <h6 className="about-last">Ewalt</h6>
-              <a href="" target="_blank">
+              <a href="https://github.com/justinewalt" target="_blank">
                <i className="contact-fa fa fa-github"></i></a>
-              <a href="" target="_blank">
+              <a href="https://www.linkedin.com/in/justin-ewalt-21b3b57a" target="_blank">
                <i className="contact-fa fa fa-linkedin-square"></i></a>
-              <a href="" target="_blank">
-               <i className="contact-fa fa fa-globe"></i></a>
+               <i className="contact-fa fa fa-globe"></i>
             </div>
           <div className="about-info three columns">
             <h4 className="about-first">Brandon</h4>
@@ -45,12 +44,11 @@ class About extends React.Component {
           <div className="about-info three columns">
             <h4 className="about-first">Gavyn</h4>
             <h6 className="about-last">Caldwell</h6>
-              <a href="" target="_blank">
+              <a href="https://github.com/GavMan1995" target="_blank">
                <i className="contact-fa fa fa-github"></i></a>
-              <a href="" target="_blank">
+              <a href="https://www.linkedin.com/in/gavyn-caldwell-207160112" target="_blank">
                <i className="contact-fa fa fa-linkedin-square"></i></a>
-              <a href="" target="_blank">
-               <i className="contact-fa fa fa-globe"></i></a>
+               <i className="contact-fa fa fa-globe"></i>
             </div>
           <div className="about-info three columns">
             <h4 className="about-first">Garrett</h4>
