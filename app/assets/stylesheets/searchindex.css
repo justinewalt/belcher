@@ -1,6 +1,5 @@
 .find-food-button {
   height: 100px;
-  width: 100px;
   background-color: #9E0F00;
   color: white;
   margin: 50px 0 50px 0;
@@ -9,8 +8,8 @@
 
 .find-food-button p {
   height: 100px;
+  font-size: 1.3em;
   line-height: 100px;
-  font-size: 1.4em;
   font-weight: bold;
 }
 
