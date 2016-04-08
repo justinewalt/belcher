@@ -13,8 +13,9 @@
   font-weight: bold;
 }
 
-.search-index-buttons {
-
+.search-index-buttons h5{
+  margin: 0;
+  padding: 0;
 }
 
 .search-index-buttons button {
