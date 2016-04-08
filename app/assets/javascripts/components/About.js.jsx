@@ -13,25 +13,25 @@ class About extends React.Component {
             <h4>Justin</h4>
               <i className="contact-fa fa fa-github"></i>
               <i className="contact-fa fa fa-linkedin-square"></i>
-              <i className="contact-fa fa fa-chrome"></i>
+              <i className="contact-fa fa fa-home"></i>
             </div>
           <div className="about-info three columns">
             <h4>Gavyn</h4>
               <i className="contact-fa fa fa-github"></i>
               <i className="contact-fa fa fa-linkedin-square"></i>
-              <i className="contact-fa fa fa-chrome"></i>
+              <i className="contact-fa fa fa-home"></i>
             </div>
           <div className="about-info three columns">
             <h4>Brandon</h4>
               <i className="contact-fa fa fa-github"></i>
               <i className="contact-fa fa fa-linkedin-square"></i>
-              <i className="contact-fa fa fa-chrome"></i>
+              <i className="contact-fa fa fa-home"></i>
             </div>
           <div className="about-info three columns">
             <h4>Garrett</h4>
               <i className="contact-fa fa fa-github"></i>
               <i className="contact-fa fa fa-linkedin-square"></i>
-              <i className="contact-fa fa fa-chrome"></i>
+              <i className="contact-fa fa fa-home"></i>
           </div>
         </div>
       </div>

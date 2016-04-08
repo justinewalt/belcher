@@ -19,7 +19,7 @@
 }
 
 .search-index-buttons button {
-  width: 100%;
+  width: 25%;
   font-size: 1.3em;
   background-color: black;
 }
@@ -27,4 +27,8 @@
 .search-index-buttons button:hover {
   color: white;
   background-color: darkgrey;
+}
+
+.search-index-input {
+  width: 100%;
 }
