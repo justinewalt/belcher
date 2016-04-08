@@ -8,7 +8,7 @@ class Navigation extends React.Component {
     if (this.props.userLogIn) {
       links = 
         <div>
-          <p className="nav-link"><a href={this.props.links.logOut}> Logout</a></p>
+          <p className="nav-link"><a data-method="delete" href={this.props.links.logOut}> Logout</a></p>
         </div>
     } else {
       links = 
@@ -26,5 +26,6 @@ class Navigation extends React.Component {
       </div>
     );
   }
+
   
 }
