@@ -9,7 +9,7 @@ class Profile extends React.Component {
         <hr />
         <h3 className="text-center">Profile</h3>
         <div>
-          <button className="text-center black four columns offset-by-four">Preferences</button>
+          <button className="preferences-button button-primary four columns offset-by-four">Preferences</button>
         </div>
       </div>
     );
