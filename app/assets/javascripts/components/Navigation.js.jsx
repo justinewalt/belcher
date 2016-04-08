@@ -9,8 +9,6 @@ class Navigation extends React.Component {
       links = 
         <div>
           <p className="nav-link"><a href={this.props.links.logOut}> Logout</a></p>
-          <p className="nav-link"><a href={this.props.links.preferences}> Preferences</a></p>
-          <p className="nav-link"><a href={this.props.links.profile}> Profile </a></p>
         </div>
     } else {
       links = 
