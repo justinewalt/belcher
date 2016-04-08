@@ -7,7 +7,7 @@ class Profile extends React.Component {
     return(
       <div className="twelve columns">
         <hr />
-        <h1 className="text-center">Profile</h1>
+        <h3 className="text-center">Profile</h3>
       </div>
     );
   }

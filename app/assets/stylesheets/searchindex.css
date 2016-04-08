@@ -1,0 +1,30 @@
+.find-food-button {
+  height: 100px;
+  width: 100px;
+  background-color: #9E0F00;
+  color: white;
+  margin: 50px 0 50px 0;
+  border-radius: 20px;
+}
+
+.find-food-button p {
+  height: 100px;
+  line-height: 100px;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.search-index-buttons {
+
+}
+
+.search-index-buttons button {
+  width: 100%;
+  font-size: 1.3em;
+  background-color: black;
+}
+
+.search-index-buttons button:hover {
+  color: white;
+  background-color: darkgrey;
+}

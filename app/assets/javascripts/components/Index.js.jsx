@@ -17,6 +17,7 @@ class Index extends React.Component {
                     userLogIn={this.props.userLogIn}
                     toggleMenuOpen={this.toggleMenuOpen}
                     />
+        <SearchIndex />
         <About />
         <Contact />
         <Profile />

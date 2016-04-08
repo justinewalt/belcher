@@ -7,7 +7,7 @@ class About extends React.Component {
     return (
       <div className="twelve columns">
         <h3 className="text-center">About</h3>
-        <p>This is the About info paragraph</p>
+        <p className="text-center">This is the About info paragraph</p>
         <div className="text-center">
           <div className="about-info three columns">
             <h4>Justin</h4>
