@@ -7,10 +7,10 @@ class NavMenu extends React.Component {
     if (this.props.isOpen) {
       return(<div className="hamburger-menu">
                 <div className="hamburger-content">
-                  <p><a>Profile</a></p>
-                  <p><a>Preferences</a></p>
-                  <p><a>About</a></p>
-                  <p><a>Contact Us</a></p>
+                  <p><a><i className="fa fa-user nav-icon"></i> Profile</a></p>
+                  <p><a><i className="fa fa-filter nav-icon"></i> Preferences</a></p>
+                  <p><a><i className="fa fa-info-circle nav-icon"></i> About</a></p>
+                  <p><a><i className="fa fa-envelope nav-icon"></i> Contact Us</a></p>
                 </div>
              </div>
             );

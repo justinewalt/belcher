@@ -7,7 +7,7 @@ class Hamburger extends React.Component {
   render(){
     return(
       <div>
-        <p onClick={this.props.toggleMenuOpen} className="hamburger"><i className="fa fa-bars fa-3x ham-icon"></i></p>
+        <p onClick={this.props.toggleMenuOpen} className="hamburger"><i className="fa fa-bars fa-2x ham-icon"></i></p>
       </div>
     );
   }
