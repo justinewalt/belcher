@@ -21,8 +21,8 @@ class Contact extends React.Component {
     return (
       <div className="twelve columns text-center">
       <hr />
-        <h3 className="text-center">Contact</h3>
-        <p className="text-center">This is the Contact info paragraph</p>
+        <h3>Contact</h3>
+        <p>This is the Contact info paragraph</p>
         <div className="offset-by-three six columns">
          <form className="contact-form" onSubmit={this.sendMessage} >
           <input ref="email" className="subject-input" type="email" placeholder="Your Email (required)" required={true} />
