@@ -1,6 +1,69 @@
 class SearchIndex extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {search: "", results: [], price: "1", distance: "1609.34", searchValue: "", toggleSearch: false}
+    this.setPrice = this.setPrice.bind(this);
+    this.setDistance = this.setDistance.bind(this);
+    this.searchFields = this.searchFields.bind(this);
+    this.getSpots = this.getSpots.bind(this);
+    this.searchParams = this.searchParams.bind(this);
+  }
+
+  searchParams(s) {
+    this.state.searchValue += `${s}|`
+  }
+
+
+  getSpots(e) {
+    e.preventDefault();
+    $.ajax({
+      url: '/search',
+      type: 'GET',
+      data: {search: this.state.searchValue, price: this.state.price, distance: this.state.distance}
+    }).done(data => {
+      this.setState({results: data, search: ""})
+    }).fail(data => {
+      console.log(data)
+    });
+
+  }
+
+  results() {
+    let price = parseInt(this.state.price)
+    if(this.state.results != []){
+      return this.state.results.map( result => {
+        if (result.price_level <= price) {
+          return(
+            <div>
+              <h1>Name: {result.name}</h1>
+              <h3>Address: {result.vicinity}</h3>
+              <h3>Price: {result.price_level}</h3>
+            </div>
+          );
+        }
+      });
+    }
+  }
+
+  setPrice(e) {
+    let value = e.target.value;
+    this.setState({price: value});
+  }
+
+  setDistance(e) {
+    let value = e.target.value;
+    this.setState({distance: value});
+  }
+
+  searchFields() {
+    if (this.state.toggleSearch)
+    return(
+      <div className="search-index-buttons price-button twelve columns">
+        <button onClick={() => this.searchParams("thai")}>thai</button>
+        <button onClick={() => this.searchParams("mexican")}>mexican</button>
+        <button onClick={() => this.searchParams("japanese")}>japanese</button>
+      </div>
+    )
   }
 
   render() {
@@ -8,22 +71,27 @@ class SearchIndex extends React.Component {
       <div className="search-index-div">
         <div className="twelve columns text-center">
           <div className="find-food-button offset-by-four four columns">
-            <p>Find Me Food</p>
+            <p onClick={this.getSpots}>Find Me Food</p>
           </div>
           <div className="twelve columns">
-            <input className="search-index-input" type="text" placeholder="Food Type or Restaurant Name (Optional)" />
+
+            <button type='button' onClick={() => this.setState({toggleSearch: !this.state.toggleSearch})}>Add Cuisine</button>
+            <input className="search-index-input" type="text" placeholder="Food Type or Restaurant Name (Optional)" ref={"searchBar"} onChange={() => this.searchParams(this.refs.searchBar.value)} />
+            {this.searchFields()}
           </div>
           <div className="search-index-buttons price-button twelve columns">
-            <button>$</button>
-            <button>$$</button>
-            <button>$$$</button>
+            <button name="price" onClick={this.setPrice} value="1" >$</button>
+            <button name="price" onClick={this.setPrice} value="2">$$</button>
+            <button name="price" onClick={this.setPrice} value="3">$$$</button>
           </div>
           <div className="search-index-buttons distance-button twelve columns">
-            <button>Walking</button>
-            <button>5 Miles</button>
-            <button>10 Miles</button>
+            <button name="distance" value="1609.34" onClick={this.setDistance}>Walking</button>
+            <button name="distance" value="8046.72" onClick={this.setDistance}>5 Miles</button>
+            <button name="distance" value="32186.9" onClick={this.setDistance}>20 Miles</button>
           </div>
+
         </div>
+        {this.results()}
       </div>
     );
   }

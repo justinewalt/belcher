@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
+
+  # GET routes
+  get '/search', to: 'home#search'
 end
