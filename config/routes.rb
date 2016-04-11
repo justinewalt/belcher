@@ -6,5 +6,5 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
-  post 'contact_us', to: 'home#contact_mailer' 
+  post 'contact_us', to: 'contact_us#new_contact' 
 end
