@@ -1,5 +1,6 @@
+<%= render partial: 'layouts/devise_nav' %>
 <div class="row">
-  <div class="offset-by-two eight columns text-center">
+  <div class="offset-by-two eight columns text-center form">
   <h2 class="registration_header">Log in</h2>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <br/>
