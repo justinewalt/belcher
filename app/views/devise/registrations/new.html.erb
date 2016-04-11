@@ -1,4 +1,6 @@
-<div class="text-center six columns offset-by-three">
+<%= render partial: 'layouts/devise_nav' %>
+
+<div class="text-center six columns offset-by-three form">
   <h2 class="registration_header">Sign up</h2>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -34,6 +36,7 @@
         <input class="button-primary" type="submit" <%= f.submit "Sign up" %>
       </div>
   <% end %>
+  <br/>
   <%= render "devise/shared/links" %>
   </div>
 </div>

@@ -17,7 +17,8 @@ class About extends React.Component {
             choices and responses, then determines the best place to eat without overwhelming the user.  
             What makes Belcher unique, innovative, and beautiful?  
             Belcher responds to your feedback. Belcher is direct,
-            percise, and appeals to your tastebuds.</p>  
+            percise, and appeals to your tastebuds.</p>
+            <p>Special thanks to <a href="http://www.devpointlabs.com/">DevPoint Labs!</a></p>
             <p>Enjoy!</p>
           </div>
         <div className="text-center">
