@@ -6,5 +6,10 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
-  post 'contact_us', to: 'contact_us#new_contact' 
+  post 'contact_us', to: 'contact_us#new_contact'
+
+#==== GET ROUTES
+  get '/search', to: 'home#search'
+
+  
 end
