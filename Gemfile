@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.2.2'
-
+gem 'google_places'
+gem 'geocoder'
 gem 'devise'
 gem 'react-rails'
 gem 'rails', '4.2.5.2'
