@@ -1,5 +1,5 @@
 class ContactUsMailerPreview < ActionMailer::Preview
- def new_contact_us_preview
-   ConactUsMailer.new
+ def contact_form_preview
+   ContactUsMailer.contact_form
  end
 end
