@@ -21,27 +21,25 @@ class SearchIndex extends React.Component {
       type: 'GET',
       data: {search: this.state.searchValue, price: this.state.price, distance: this.state.distance}
     }).done(data => {
-      this.setState({results: data, search: ""})
+      this.setState({results: data, search: "", result: data[Math.floor(Math.random()*data.length)]})
     }).fail(data => {
       console.log(data)
     });
 
   }
 
+
+
   results() {
-    let price = parseInt(this.state.price)
-    if(this.state.results != []){
-      return this.state.results.map( result => {
-        if (result.price_level <= price) {
-          return(
-            <div>
-              <h1>Name: {result.name}</h1>
-              <h3>Address: {result.vicinity}</h3>
-              <h3>Price: {result.price_level}</h3>
-            </div>
-          );
-        }
-      });
+    if(this.state.results.length != 0){
+      debugger
+      return(
+        <div>
+          <h1>Name: {this.state.result.name}</h1>
+          <h3>Address: {this.state.result.vicinity}</h3>
+          <h3>Price: {this.state.result.price_level}</h3>
+        </div>
+      );
     }
   }
 
@@ -57,13 +55,9 @@ class SearchIndex extends React.Component {
 
   searchFields() {
     if (this.state.toggleSearch)
-    return(
-      <div className="search-index-buttons price-button twelve columns">
-        <button onClick={() => this.searchParams("thai")}>thai</button>
-        <button onClick={() => this.searchParams("mexican")}>mexican</button>
-        <button onClick={() => this.searchParams("japanese")}>japanese</button>
-      </div>
-    )
+      return(
+        <FoodGrid searchParams={this.searchParams}/>
+      )
   }
 
   render() {
@@ -78,6 +72,7 @@ class SearchIndex extends React.Component {
             <button type='button' onClick={() => this.setState({toggleSearch: !this.state.toggleSearch})}>Add Cuisine</button>
             <input className="search-index-input" type="text" placeholder="Food Type or Restaurant Name (Optional)" ref={"searchBar"} onChange={() => this.searchParams(this.refs.searchBar.value)} />
             {this.searchFields()}
+            <hr />
           </div>
           <div className="search-index-buttons price-button twelve columns">
             <button name="price" onClick={this.setPrice} value="1" >$</button>
