@@ -1,7 +1,7 @@
 class SearchIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {search: "", results: [], price: "1", distance: "1609.34", searchValue: "", toggleSearch: false}
+    this.state = {search: "", results: [], price: "3", distance: "1609.34", searchValue: "", toggleSearch: false}
     this.setPrice = this.setPrice.bind(this);
     this.setDistance = this.setDistance.bind(this);
     this.searchFields = this.searchFields.bind(this);
