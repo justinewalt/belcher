@@ -35,9 +35,9 @@ class About extends React.Component {
           <div className="about-info three columns">
             <h4 className="about-first">Brandon</h4>
             <h6 className="about-last">Huynh</h6>
-              <a href="" target="_blank">
+              <a href="https://github.com/brandonvhuynh" target="_blank">
                <i className="contact-fa fa fa-github"></i></a>
-              <a href="" target="_blank">
+              <a href="https://www.linkedin.com/in/brandon-huynh-a02655a6" target="_blank">
                <i className="contact-fa fa fa-linkedin-square"></i></a>
               <a href="" target="_blank">
                <i className="contact-fa fa fa-globe"></i></a>
@@ -58,7 +58,7 @@ class About extends React.Component {
                <i className="contact-fa fa fa-github"></i></a>
               <a href="https://www.linkedin.com/in/garrett-stott-4262b1104" target="_blank">
                <i className="contact-fa fa fa-linkedin-square"></i></a>
-              <a href="https://garrettstott.herokuapp.com/" target="_blank">
+              <a href="" target="_blank">
                <i className="contact-fa fa fa-globe"></i></a>
           </div>
         </div>
