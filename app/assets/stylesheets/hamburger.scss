@@ -1,5 +1,5 @@
 .hamburger-menu {
-  background-color: #9e0f00 ;
+  background-color: black ;
   position: absolute;
   height: 100vh;
 }
@@ -23,8 +23,16 @@
   font-size: 2em;
   margin-left: 9%;
   padding-top: 30%;
+  color: black;
+  cursor: pointer;
 }
 
 .nav-icon {
   padding-right: 30px;
+  color: #9e0f00;
+  cursor: pointer;
+}
+
+.hamburger-text p {
+  color: black;
 }
