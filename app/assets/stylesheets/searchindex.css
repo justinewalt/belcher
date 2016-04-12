@@ -16,7 +16,7 @@
 }
 
 .find-food-button:hover {
-  background-color: darkgrey;
+  background-color: #33C3F0;
 }
 
 .search-index-buttons h5{
@@ -31,20 +31,10 @@
   background-color: black;
 }
 
-.search-index-buttons button:hover {
-  color: white;
-  background-color: #33C3F0;
-}
-
 .search-index-input {
-  width: 100%;
+  width: 99%;
 }
 
 .cuisine-button button {
   background-color: black;
-}
-
-.cuisine-button button:hover {
-  color: white;
-  background-color: #33C3F0;
 }
