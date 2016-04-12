@@ -21,10 +21,7 @@ class CuisineButton extends React.Component {
 
   render() {
     return (
-      <div className="four colu
-      mns cuisine-button">
-        <button onClick={this.toggleButton} style={this.state.style}>{this.props.name}</button>
-      </div>
+      <button onClick={this.toggleButton} style={this.state.style}>{this.props.name}</button>
     )
   }
 }
