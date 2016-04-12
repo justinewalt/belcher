@@ -7,3 +7,4 @@ if Rails.env.development?
     raise "Missing file google.yml"
   end
 end
+

@@ -13,3 +13,4 @@
 /tmp
 /coverage
 config/google.yml
+config/facebook_omniauth_creds.yml
