@@ -1,25 +1,31 @@
 class SearchIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {search: "", results: [], price: "3", distance: "1609.34", searchValue: "", toggleSearch: false, origin: ""}
+    this.state = {search: "", results: [], price: "3", distance: "1609.34", searchValue: [], toggleSearch: false, origin: "", lat: 0.00, long: 0.00}
     this.setPrice = this.setPrice.bind(this);
     this.setDistance = this.setDistance.bind(this);
     this.searchFields = this.searchFields.bind(this);
     this.getSpots = this.getSpots.bind(this);
     this.searchParams = this.searchParams.bind(this);
+    this.searchBar = this.searchBar.bind(this);
   }
 
-  searchParams(s) {
-    this.state.searchValue += `${s}|`
+  searchParams(search) {
+    this.state.searchValue.push(`${search}|`)
   }
 
+  searchBar(e) {
+    e.preventDefault();
+    this.setState({searchValue: [this.refs.searchBar.value]})
+    this.getSpots(e);
+  }
 
   getSpots(e) {
     e.preventDefault();
     $.ajax({
       url: '/search',
       type: 'GET',
-      data: {search: this.state.searchValue, price: this.state.price, distance: this.state.distance}
+      data: {search: this.state.searchValue, price: this.state.price, distance: this.state.distance, lat: this.state.lat, long: this.state.long}
     }).done(data => {
       this.setState({results: data.filtered_spots, search: "", result: data.filtered_spots[Math.floor(Math.random()*data.filtered_spots.length)], origin: data.origin})
     }).fail(data => {
@@ -77,11 +83,10 @@ class SearchIndex extends React.Component {
           <div className="twelve columns">
 
             <button type='button' onClick={() => this.setState({toggleSearch: !this.state.toggleSearch})}>Add Cuisine</button>
-            <form onSubmit={() => this.searchParams(this.refs.searchBar.value)}>
-              <input className="search-index-input" type="text" placeholder="Food Type or Restaurant Name (Optional)" ref={"searchBar"}  />
+            <form onSubmit={this.searchBar} >
+              <input className="search-index-input" type="text" placeholder="Food Type or Restaurant Name (Optional)" ref={"searchBar"} />
               <button type="submit">Submit</button>
             </form>
-
             {this.searchFields()}
             <hr />
           </div>
