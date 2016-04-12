@@ -10,6 +10,8 @@ class SearchIndex extends React.Component {
   }
 
   searchParams(s) {
+    console.log(s)
+    debugger
     this.state.searchValue += `${s}|`
   }
 
@@ -32,7 +34,6 @@ class SearchIndex extends React.Component {
 
   results() {
     if(this.state.results.length != 0){
-      debugger
       return(
         <div>
           <h1>Name: {this.state.result.name}</h1>
@@ -68,11 +69,10 @@ class SearchIndex extends React.Component {
             <p onClick={this.getSpots}>Find Me Food</p>
           </div>
           <div className="twelve columns">
-
-            <button type='button' onClick={() => this.setState({toggleSearch: !this.state.toggleSearch})}>Add Cuisine</button>
+            <button type='button' onClick={() => this.setState({toggleSearch: !this.state.toggleSearch})}>Popular Cuisines</button>
+            <br/>
+            <br/>
             <input className="search-index-input" type="text" placeholder="Food Type or Restaurant Name (Optional)" ref={"searchBar"} onChange={() => this.searchParams(this.refs.searchBar.value)} />
-            {this.searchFields()}
-            <hr />
           </div>
           <div className="search-index-buttons price-button twelve columns">
             <button name="price" onClick={this.setPrice} value="1" >$</button>
@@ -84,6 +84,7 @@ class SearchIndex extends React.Component {
             <button name="distance" value="8046.72" onClick={this.setDistance}>5 Miles</button>
             <button name="distance" value="32186.9" onClick={this.setDistance}>20 Miles</button>
           </div>
+            {this.searchFields()}
 
         </div>
         {this.results()}

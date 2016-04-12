@@ -7,9 +7,14 @@
 
 .food-button-input button:hover {
   color: white;
-  background-color: darkgrey;
+  background-color: #33C3F0;
 }
 
 .top-button button {
   width: 50%;
+}
+
+.cuisine-button button {
+  width: 100%;
+  padding-right: 0px;
 }
