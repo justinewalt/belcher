@@ -82,6 +82,7 @@ class SearchIndex extends React.Component {
             <button type='button' onClick={() => this.setState({toggleSearch: !this.state.toggleSearch})}>Popular Cuisines</button>
             <br />
             <br />
+            {this.searchFields()}
           </div>
           <div className="search-index-buttons price-button twelve columns">
             <button name="price" onClick={this.setPrice} value="1" >$</button>
@@ -93,7 +94,6 @@ class SearchIndex extends React.Component {
             <button name="distance" value="8046.72" onClick={this.setDistance}>5 Miles</button>
             <button name="distance" value="32186.9" onClick={this.setDistance}>20 Miles</button>
           </div>
-            {this.searchFields()}
 
           <form onSubmit={this.searchBar} >
             <input className="search-index-input" type="text" placeholder="Food Type or Restaurant Name (Optional)" ref={"searchBar"} />
