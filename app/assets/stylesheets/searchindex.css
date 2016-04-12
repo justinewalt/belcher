@@ -31,6 +31,10 @@
   background-color: black;
 }
 
+.search-index-buttons button:hover {
+  background-color: #33C3F0;
+}
+
 .search-index-input {
   width: 99%;
 }
