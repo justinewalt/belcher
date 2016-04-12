@@ -71,8 +71,8 @@ class SearchIndex extends React.Component {
     return(
       <div className="search-index-div">
         <div className="twelve columns text-center">
-          <div className="find-food-button offset-by-four four columns">
-            <p onClick={this.getSpots}>Find Me Food</p>
+          <div onClick={this.getSpots} className="find-food-button offset-by-four four columns">
+            <p>Find Me Food</p>
           </div>
           <div className="twelve columns">
 

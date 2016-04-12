@@ -12,6 +12,11 @@
   font-size: 1.3em;
   line-height: 100px;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.find-food-button:hover {
+  background-color: darkgrey;
 }
 
 .search-index-buttons h5{
