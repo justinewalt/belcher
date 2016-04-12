@@ -4,7 +4,6 @@ class HomeController < ApplicationController
   end
 
   def search
-    binding.pry
     price = params["price"].to_i
     distance = params["distance"].to_i
     lat = "40.7608".to_f

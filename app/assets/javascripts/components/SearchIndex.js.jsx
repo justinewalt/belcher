@@ -40,6 +40,7 @@ class SearchIndex extends React.Component {
   results() {
     if(this.state.results.length != 0){
       let url = `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBblRBZp_9JKVUeK-HKRcW4_EY160-CmeU&origin=${this.state.origin}&destination=${this.state.result.vicinity}`
+      return(
         <div className="text-center">
           <h1>Name: {this.state.result.name}</h1>
           <iframe
