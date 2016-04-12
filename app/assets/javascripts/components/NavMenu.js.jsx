@@ -16,7 +16,7 @@ class NavMenu extends React.Component {
                     <a> Preferences</a>
                   </p>
                   <p className="hamburger-text">
-                    <i className="fa fa-info-circle nav-icon"></i> 
+                    <i className="fa fa-info-circle nav-icon"></i>
                     <a> About</a></p>
                   <p className="hamburger-text">
                   <i className="fa fa-envelope nav-icon"></i>
@@ -31,7 +31,7 @@ class NavMenu extends React.Component {
     return(
       <div>
         { this.menu() }
-      </div>  
+      </div>
     )
   }
 }
