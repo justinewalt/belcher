@@ -4,7 +4,8 @@ class Contact extends React.Component {
     this.sendMail = this.sendMail.bind(this);
   }
 
-  sendMail() {
+  sendMail(e) {
+    e.preventDefault();
     let body = `Email: ${this.refs.email.value}\nSubject: ${this.refs.subject.value}\nMessage: ${this.refs.message.value}`
     $.ajax({
       url: '/contact_us',
