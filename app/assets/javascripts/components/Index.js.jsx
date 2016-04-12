@@ -20,7 +20,6 @@ class Index extends React.Component {
         <SearchIndex />
         <About />
         <Contact />
-        <FoodGrid />
         <Profile />
         <NavMenu isOpen={this.state.menuOpen} />
       </div>
