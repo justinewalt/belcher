@@ -1,6 +1,5 @@
-.food-button-input button {
+.food-button-input button{
   width: 33%;
-  padding-left: 25px;
   font-size: 1.1em;
   background-color: black;
 }
@@ -10,11 +9,13 @@
   background-color: #33C3F0;
 }
 
+.food-button-input {
+  margin: 0;
+  padding: 0;
+}
+
 .top-button button {
   width: 50%;
 }
 
-.cuisine-button button {
-  width: 100%;
-  padding-right: 0px;
-}
+
