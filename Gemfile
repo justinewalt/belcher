@@ -11,6 +11,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'font-awesome-sass', '~> 4.5.0'
 gem 'delayed_job'
 gem 'delayed_job_active_record'
+gem 'omniauth-facebook'
 
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
