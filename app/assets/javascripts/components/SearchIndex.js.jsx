@@ -1,7 +1,7 @@
 class SearchIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {search: "", results: [], price: "3", distance: "1609.34", searchValue: "", toggleSearch: false}
+    this.state = {search: "", results: [], price: "3", distance: "1609.34", searchValue: "", toggleSearch: false, origin: ""}
     this.setPrice = this.setPrice.bind(this);
     this.setDistance = this.setDistance.bind(this);
     this.searchFields = this.searchFields.bind(this);
@@ -21,7 +21,7 @@ class SearchIndex extends React.Component {
       type: 'GET',
       data: {search: this.state.searchValue, price: this.state.price, distance: this.state.distance}
     }).done(data => {
-      this.setState({results: data, search: "", result: data[Math.floor(Math.random()*data.length)]})
+      this.setState({results: data.filtered_spots, search: "", result: data.filtered_spots[Math.floor(Math.random()*data.filtered_spots.length)], origin: data.origin})
     }).fail(data => {
       console.log(data)
     });
@@ -32,12 +32,19 @@ class SearchIndex extends React.Component {
 
   results() {
     if(this.state.results.length != 0){
-      debugger
+      let url = `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBblRBZp_9JKVUeK-HKRcW4_EY160-CmeU&origin=${this.state.origin}&destination=${this.state.result.vicinity}`
       return(
-        <div>
+        <div className="text-center">
           <h1>Name: {this.state.result.name}</h1>
-          <h3>Address: {this.state.result.vicinity}</h3>
-          <h3>Price: {this.state.result.price_level}</h3>
+          <iframe
+            width="650"
+            height="500"
+            frameBorder="0"
+            src={url} allowFullScreen>
+          </iframe>
+
+          <h4>Address: {this.state.result.vicinity}</h4>
+          <h4>Price: {this.state.result.price_level}</h4>
         </div>
       );
     }
@@ -64,13 +71,17 @@ class SearchIndex extends React.Component {
     return(
       <div className="search-index-div">
         <div className="twelve columns text-center">
-          <div className="find-food-button offset-by-four four columns">
-            <p onClick={this.getSpots}>Find Me Food</p>
+          <div onClick={this.getSpots} className="find-food-button offset-by-four four columns">
+            <p>Find Me Food</p>
           </div>
           <div className="twelve columns">
 
             <button type='button' onClick={() => this.setState({toggleSearch: !this.state.toggleSearch})}>Add Cuisine</button>
-            <input className="search-index-input" type="text" placeholder="Food Type or Restaurant Name (Optional)" ref={"searchBar"} onChange={() => this.searchParams(this.refs.searchBar.value)} />
+            <form onSubmit={() => this.searchParams(this.refs.searchBar.value)}>
+              <input className="search-index-input" type="text" placeholder="Food Type or Restaurant Name (Optional)" ref={"searchBar"}  />
+              <button type="submit">Submit</button>
+            </form>
+
             {this.searchFields()}
             <hr />
           </div>
