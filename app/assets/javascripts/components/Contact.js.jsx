@@ -11,7 +11,6 @@ class Contact extends React.Component {
       type: 'POST',
       data: { body: body}
     }).done( data => {
-      console.log(data);
       this.refs.email.value = null;
       this.refs.subject.value = null;
       this.refs.message.value = null;
