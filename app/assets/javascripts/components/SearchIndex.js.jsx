@@ -7,7 +7,6 @@ class SearchIndex extends React.Component {
     this.searchFields = this.searchFields.bind(this);
     this.getSpots = this.getSpots.bind(this);
     this.searchParams = this.searchParams.bind(this);
-    this.searchBar = this.searchBar.bind(this);
   }
 
 
@@ -15,14 +14,12 @@ class SearchIndex extends React.Component {
     this.state.searchValue.push(`${search}|`)
   }
 
-  searchBar(e) {
-    e.preventDefault();
-    this.setState({searchValue: [this.refs.searchBar.value]})
-    this.getSpots(e);
-  }
-
   getSpots(e) {
     e.preventDefault();
+    if (this.refs.searchBar != "") {
+      this.state.searchValue.push (`${this.refs.searchBar.value}|`)
+    }
+
     $.ajax({
       url: '/search',
       type: 'GET',
@@ -100,9 +97,6 @@ class SearchIndex extends React.Component {
 
           <form onSubmit={this.searchBar} >
             <input className="search-index-input" type="text" placeholder="Food Type or Restaurant Name (Optional)" ref={"searchBar"} />
-            <br />
-            <br />
-            <button type="submit">Submit</button>
           </form>
 
         </div>
