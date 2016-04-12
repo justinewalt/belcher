@@ -33,9 +33,18 @@
 
 .search-index-buttons button:hover {
   color: white;
-  background-color: darkgrey;
+  background-color: #33C3F0;
 }
 
 .search-index-input {
   width: 100%;
+}
+
+.cuisine-button button {
+  background-color: black;
+}
+
+.cuisine-button button:hover {
+  color: white;
+  background-color: #33C3F0;
 }

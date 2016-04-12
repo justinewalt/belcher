@@ -10,6 +10,7 @@ class SearchIndex extends React.Component {
     this.searchBar = this.searchBar.bind(this);
   }
 
+
   searchParams(search) {
     this.state.searchValue.push(`${search}|`)
   }
@@ -39,7 +40,6 @@ class SearchIndex extends React.Component {
   results() {
     if(this.state.results.length != 0){
       let url = `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBblRBZp_9JKVUeK-HKRcW4_EY160-CmeU&origin=${this.state.origin}&destination=${this.state.result.vicinity}`
-      return(
         <div className="text-center">
           <h1>Name: {this.state.result.name}</h1>
           <iframe
@@ -81,14 +81,12 @@ class SearchIndex extends React.Component {
             <p>Find Me Food</p>
           </div>
           <div className="twelve columns">
-
             <button type='button' onClick={() => this.setState({toggleSearch: !this.state.toggleSearch})}>Add Cuisine</button>
             <form onSubmit={this.searchBar} >
               <input className="search-index-input" type="text" placeholder="Food Type or Restaurant Name (Optional)" ref={"searchBar"} />
               <button type="submit">Submit</button>
             </form>
             {this.searchFields()}
-            <hr />
           </div>
           <div className="search-index-buttons price-button twelve columns">
             <button name="price" onClick={this.setPrice} value="1" >$</button>
@@ -100,6 +98,7 @@ class SearchIndex extends React.Component {
             <button name="distance" value="8046.72" onClick={this.setDistance}>5 Miles</button>
             <button name="distance" value="32186.9" onClick={this.setDistance}>20 Miles</button>
           </div>
+            {this.searchFields()}
 
         </div>
         {this.results()}
