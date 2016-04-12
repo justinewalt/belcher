@@ -14,7 +14,7 @@ class CuisineButton extends React.Component {
         color: 'white'
       }
     }
-    this.props.handleClick(this.props.name)
+    this.props.handleClick(this.props.name, select)
     this.setState({ checked: select, style: style });
   }
 
