@@ -268,36 +268,36 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  awesome_print
-  better_errors
-  capybara
-  database_cleaner
+  awesome_print (= 1.6.1)
+  better_errors (= 2.1.1)
+  capybara (= 2.7.0)
+  database_cleaner (= 1.5.1)
   delayed_job (= 4.1.1)
   delayed_job_active_record (= 4.1.0)
   devise (= 3.5.6)
-  factory_girl_rails
-  faker
+  factory_girl_rails (= 4.7.0)
+  faker (= 1.6.3)
   font-awesome-sass (~> 4.5.0)
   geocoder (= 1.3.3)
   google_places (= 0.32.0)
   jbuilder (~> 2.0)
   jquery-rails (= 4.1.1)
-  letter_opener
+  letter_opener (= 1.4.1)
   omniauth-facebook (= 3.0.0)
   pg (~> 0.15)
-  populator
-  pry
+  populator (= 1.0.0)
+  pry (= 0.10.3)
   puma (= 3.4.0)
   rails (= 4.2.5.2)
   rails_12factor (= 0.0.3)
   react-rails (= 1.6.2)
-  rspec-rails
+  rspec-rails (= 3.4.2)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
-  selenium-webdriver
-  shoulda-matchers
-  simplecov
-  spring
+  selenium-webdriver (= 2.53.0)
+  shoulda-matchers (= 3.1.1)
+  simplecov (= 0.11.2)
+  spring (= 1.7.1)
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
 
