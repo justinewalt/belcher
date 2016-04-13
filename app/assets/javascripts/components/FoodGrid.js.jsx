@@ -15,7 +15,7 @@ class FoodGrid extends React.Component {
           <FoodButton handleClick={this.props.searchParams} name="Japanese" />
           <FoodButton handleClick={this.props.searchParams} name="Mexican" />
           <FoodButton handleClick={this.props.searchParams} name="Thai" />
-          <FoodButton handleClick={this.props.searchParams} name="Vietnamese" /> 
+          <FoodButton handleClick={this.props.searchParams} name="Vietnamese" />
         </div>
         <br/>
         <br/>

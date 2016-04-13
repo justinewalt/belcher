@@ -8,6 +8,7 @@ class HomeController < ApplicationController
     distance = params["distance"].to_i
     lat = params["lat"].to_f
     long = params["lng"].to_f
+    binding.pry
     origin = Geocoder.search("#{lat}, #{long}").first.formatted_address
     search_params = params["search"].join("| ")
     spots = @client.spots(lat, long, :radius =>  distance, :name => search_params,

@@ -54,33 +54,33 @@ class SearchIndex extends React.Component {
 
 
   //=========== GeoLocation Code Starts Here ==============
-    geoloc() {
-    let watchId = null;
-      if (navigator.geolocation) {
-        let optn = {
-          enableHighAccuracy : true,
-          timeout : Infinity,
-          maximumAge : 0
-        }
-        watchId = navigator.geolocation.watchPosition(this.success,()=>{},optn);
-      } else {
-          alert('Geolocation is not supported in your browser');
+  geoloc() {
+  let watchId = null;
+    if (navigator.geolocation) {
+      let optn = {
+        enableHighAccuracy : true,
+        timeout : Infinity,
+        maximumAge : 0
       }
-
+      watchId = navigator.geolocation.watchPosition(this.success,()=>{},optn);
+    } else {
+        alert('Geolocation is not supported in your browser');
     }
 
-    success(position) {
-      this.state.lat = position.coords.latitude
-      this.state.lng = position.coords.longitude
-      this.stopWatch();
-    }
+  }
 
-    stopWatch() {
-      if(watchId) {
-        navigator.geolocation.clearWatch(watchId);
-        watchId = null;
-      }
+  success(position) {
+    this.state.lat = position.coords.latitude
+    this.state.lng = position.coords.longitude
+    this.stopWatch();
+  }
+
+  stopWatch() {
+    if(watchId) {
+      navigator.geolocation.clearWatch(watchId);
+      watchId = null;
     }
+  }
   //============= GeoLocation Code Ends Here ================
 
 
@@ -136,6 +136,7 @@ class SearchIndex extends React.Component {
 //======================= render of the page ========================
   render() {
     this.geoloc();
+    debugger
     return(
       <div className="search-index-div">
         <div className="twelve columns text-center">
@@ -151,9 +152,8 @@ class SearchIndex extends React.Component {
           <PriceGrid setPrice={this.setPrice}/>
           <DistanceGrid setDistance={this.setDistance}/>
           <input className="search-index-input" type="text" placeholder="Food Type or Restaurant Name (Optional)" ref={"searchBar"} />
-
         </div>
-        {this.results()}
+        <ResultsPage results={this.state.results}/>
       </div>
     );
   }
