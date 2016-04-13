@@ -1,7 +1,11 @@
 class SearchIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {search: "", results: [], price: "3", distance: "1609.34", searchValue: [], toggleSearch: false, origin: "", lat: 0.00, long: 0.00}
+    this.state = {search: "", results: [], price: "3",
+                 distance: "1609.34", searchValue: [],
+                 toggleSearch: false, origin: "",
+                 lat: 0.00, long: 0.00}
+
     this.setPrice = this.setPrice.bind(this);
     this.setDistance = this.setDistance.bind(this);
     this.searchFields = this.searchFields.bind(this);
@@ -12,7 +16,7 @@ class SearchIndex extends React.Component {
     this.success = this.success.bind(this);
   }
 
-
+//========================== SEARCH PARAMS ===============================
   searchParams(search, checked) {
     let searchValue = this.state.searchValue;
     if (checked) {
@@ -24,6 +28,7 @@ class SearchIndex extends React.Component {
     this.setState({ searchValue: searchValue });
   }
 
+//======================== GET SPOTS (AJAX CALL)===========================
   getSpots(e) {
     e.preventDefault();
     if (this.refs.searchBar != "") {
@@ -33,18 +38,22 @@ class SearchIndex extends React.Component {
     $.ajax({
       url: '/search',
       type: 'GET',
-      data: {search: this.state.searchValue, price: this.state.price, distance: this.state.distance, lat: this.state.lat, lng: this.state.lng}
+      data: {search: this.state.searchValue,
+            price: this.state.price,
+            distance: this.state.distance,
+            lat: this.state.lat,
+            lng: this.state.lng}
     }).done(data => {
-      this.setState({results: data.filtered_spots, search: "", result: data.filtered_spots[Math.floor(Math.random()*data.filtered_spots.length)], origin: data.origin})
+      this.setState({results: data.filtered_spots, search: "",
+                    result: data.filtered_spots[Math.floor(Math.random()*data.filtered_spots.length)],
+                    origin: data.origin, rating: data.rating, icon: data.icon})
     }).fail(data => {
       console.log(data)
     });
   }
 
 
-  // GeoLocation Code Starts Here
-
-
+  //=========== GeoLocation Code Starts Here ==============
     geoloc() {
     let watchId = null;
       if (navigator.geolocation) {
@@ -72,18 +81,25 @@ class SearchIndex extends React.Component {
         watchId = null;
       }
     }
+  //============= GeoLocation Code Ends Here ================
 
 
-  // GeoLocation Code Ends Here
-
-
-
+// =========================== RESULTS =================================
   results() {
     if(this.state.results.length != 0){
       let url = `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBblRBZp_9JKVUeK-HKRcW4_EY160-CmeU&origin=${this.state.origin}&destination=${this.state.result.vicinity}`
+      let price = this.state.result.price_level
+      if (price == 3) {
+        price = 'Price: $$$'
+      }else if (price == 2) {
+        price = 'Price: $$'
+      }else if (price == 1) {
+        price = 'Price: $'
+      };
+
       return(
         <div className="text-center">
-          <h1>Name: {this.state.result.name}</h1>
+          <h1>{this.state.result.name}</h1>
           <iframe
             width="650"
             height="500"
@@ -92,22 +108,26 @@ class SearchIndex extends React.Component {
           </iframe>
 
           <h4>Address: {this.state.result.vicinity}</h4>
-          <h4>Price: {this.state.result.price_level}</h4>
+          <h4>{price}</h4>
+          <h4>Rating: {this.state.result.rating}</h4>
+
         </div>
       );
     }
   }
 
+//============== sets the price ===========================
   setPrice(e) {
     let value = e.target.value;
     this.setState({price: value});
   }
-
+//============== sets the distance =========================
   setDistance(e) {
     let value = e.target.value;
     this.setState({distance: value});
   }
 
+//============ toggles the search fields ======================
   searchFields() {
     if (this.state.toggleSearch)
       return(
@@ -115,6 +135,7 @@ class SearchIndex extends React.Component {
       )
   }
 
+//======================= render of the page ========================
   render() {
     this.geoloc();
     return(
