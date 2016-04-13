@@ -139,10 +139,7 @@ class SearchIndex extends React.Component {
             <button name="distance" value="8046.72" onClick={this.setDistance}>5 Miles</button>
             <button name="distance" value="32186.9" onClick={this.setDistance}>20 Miles</button>
           </div>
-
-          <form onSubmit={this.searchBar} >
-            <input className="search-index-input" type="text" placeholder="Food Type or Restaurant Name (Optional)" ref={"searchBar"} />
-          </form>
+          <input className="search-index-input" type="text" placeholder="Food Type or Restaurant Name (Optional)" ref={"searchBar"} />
 
         </div>
         {this.results()}
