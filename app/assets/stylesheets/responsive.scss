@@ -2,32 +2,34 @@
   .nav-link {
     display: none;
   }
-  .logo {
-    display: none;
-  }
+
   .hamburger-menu {
     width: 70%;
   }
 }
 
-@media (min-width: 320px) and (max-width: 699px){
+@media (min-width: 320px) and (max-width: 400px){
   .nav-link {
     display: none;
   }
+
   .hamburger-menu {
     width: 100%;
   }
+
 }
 
-@media (min-width: 700px){
+@media (min-width: 401px) and (max-width: 700px){
   .ham-icon {
     visibility: visible;
   }
+
   .nav-link {
     visibility: visible;
   }
+
   .hamburger-menu {
-    width: 35%;
+    width: 55%;
   }
 }
 
@@ -35,6 +37,7 @@
   .ham-icon {
     visibility: visible;
   }
+
   .nav-link {
     visibility: visible;
   }
