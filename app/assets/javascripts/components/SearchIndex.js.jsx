@@ -20,7 +20,7 @@ class SearchIndex extends React.Component {
   searchParams(search, checked) {
     let searchValue = this.state.searchValue;
     if (checked) {
-      searchValue.push(`${search}|`)
+      searchValue.push(search)
     }else {
       let index = searchValue.findIndex( v => v === search )
       searchValue.splice(index, 1)

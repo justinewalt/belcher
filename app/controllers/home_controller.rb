@@ -9,7 +9,7 @@ class HomeController < ApplicationController
     lat = params["lat"].to_f
     long = params["lng"].to_f
     origin = Geocoder.search("#{lat}, #{long}").first.formatted_address
-    search_params = params["search"].join(" ")
+    search_params = params["search"].join("| ")
     spots = @client.spots(lat, long, :radius =>  distance, :name => search_params,
                           :types => ['restaurant', 'food', 'meal_takeaway', 'meal_delivery', 'cafe', 'bakery'],
                           :exclude => ['grocery_or_supermarket'] )
