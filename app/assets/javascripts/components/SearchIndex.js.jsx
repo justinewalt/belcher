@@ -52,8 +52,6 @@ class SearchIndex extends React.Component {
     });
   }
 
-<<<<<<< 8a6b88adddfeaa2ca5dc582e47c88f194e1d555e
-
   //=========== GeoLocation Code Starts Here ==============
     geoloc() {
     let watchId = null;
@@ -86,8 +84,7 @@ class SearchIndex extends React.Component {
 
 
 // =========================== RESULTS =================================
-=======
->>>>>>> toggle price and distance
+
   results() {
     if(this.state.results.length != 0){
       let url = `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBblRBZp_9JKVUeK-HKRcW4_EY160-CmeU&origin=${this.state.origin}&destination=${this.state.result.vicinity}`
