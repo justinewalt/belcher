@@ -6,8 +6,8 @@ class HomeController < ApplicationController
   def search
     price = params["price"].to_i
     distance = params["distance"].to_i
-    lat = "40.7608".to_f
-    long = "-111.8910".to_f
+    lat = params["lat"].to_f
+    long = params["lng"].to_f
     location = Geocoder.search("#{lat}, #{long}")
     origin = location.first.formatted_address
     search_params = params["search"]

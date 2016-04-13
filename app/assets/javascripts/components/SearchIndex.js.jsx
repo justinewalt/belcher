@@ -7,6 +7,9 @@ class SearchIndex extends React.Component {
     this.searchFields = this.searchFields.bind(this);
     this.getSpots = this.getSpots.bind(this);
     this.searchParams = this.searchParams.bind(this);
+    this.geoloc = this.geoloc.bind(this);
+    this.stopWatch = this.stopWatch.bind(this);
+    this.success = this.success.bind(this);
   }
 
 
@@ -30,13 +33,48 @@ class SearchIndex extends React.Component {
     $.ajax({
       url: '/search',
       type: 'GET',
-      data: {search: this.state.searchValue, price: this.state.price, distance: this.state.distance, lat: this.state.lat, long: this.state.long}
+      data: {search: this.state.searchValue, price: this.state.price, distance: this.state.distance, lat: this.state.lat, lng: this.state.lng}
     }).done(data => {
       this.setState({results: data.filtered_spots, search: "", result: data.filtered_spots[Math.floor(Math.random()*data.filtered_spots.length)], origin: data.origin})
     }).fail(data => {
       console.log(data)
     });
   }
+
+
+  // GeoLocation Code Starts Here
+
+
+    geoloc() {
+    let watchId = null;
+      if (navigator.geolocation) {
+        let optn = {
+          enableHighAccuracy : true,
+          timeout : Infinity,
+          maximumAge : 0
+        }
+        watchId = navigator.geolocation.watchPosition(this.success,()=>{},optn);
+      } else {
+          alert('Geolocation is not supported in your browser');
+      } 
+      
+    }
+
+    success(position) {
+      this.state.lat = position.coords.latitude
+      this.state.lng = position.coords.longitude
+      this.stopWatch();
+    }
+   
+    stopWatch() {
+      if(watchId) {
+        navigator.geolocation.clearWatch(watchId);
+        watchId = null;
+      }
+    }
+
+
+  // GeoLocation Code Ends Here
 
 
 
@@ -78,6 +116,7 @@ class SearchIndex extends React.Component {
   }
 
   render() {
+    this.geoloc();
     return(
       <div className="search-index-div">
         <div className="twelve columns text-center">
