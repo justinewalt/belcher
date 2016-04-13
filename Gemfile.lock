@@ -272,25 +272,25 @@ DEPENDENCIES
   better_errors
   capybara
   database_cleaner
-  delayed_job
-  delayed_job_active_record
-  devise
+  delayed_job (= 4.1.1)
+  delayed_job_active_record (= 4.1.0)
+  devise (= 3.5.6)
   factory_girl_rails
   faker
   font-awesome-sass (~> 4.5.0)
-  geocoder
-  google_places
+  geocoder (= 1.3.3)
+  google_places (= 0.32.0)
   jbuilder (~> 2.0)
-  jquery-rails
+  jquery-rails (= 4.1.1)
   letter_opener
-  omniauth-facebook
+  omniauth-facebook (= 3.0.0)
   pg (~> 0.15)
   populator
   pry
-  puma
+  puma (= 3.4.0)
   rails (= 4.2.5.2)
-  rails_12factor
-  react-rails
+  rails_12factor (= 0.0.3)
+  react-rails (= 1.6.2)
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
