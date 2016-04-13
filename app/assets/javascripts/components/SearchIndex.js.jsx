@@ -117,13 +117,11 @@ class SearchIndex extends React.Component {
   }
 
 //============== sets the price ===========================
-  setPrice(e) {
-    let value = e.target.value;
+  setPrice(value) {
     this.setState({price: value});
   }
 //============== sets the distance =========================
-  setDistance(e) {
-    let value = e.target.value;
+  setDistance(value) {
     this.setState({distance: value});
   }
 
@@ -150,16 +148,8 @@ class SearchIndex extends React.Component {
             <br />
             {this.searchFields()}
           </div>
-          <div className="search-index-buttons price-button twelve columns">
-            <button name="price" onClick={this.setPrice} value="1" >$</button>
-            <button name="price" onClick={this.setPrice} value="2">$$</button>
-            <button name="price" onClick={this.setPrice} value="3">$$$</button>
-          </div>
-          <div className="search-index-buttons distance-button twelve columns">
-            <button name="distance" value="1609.34" onClick={this.setDistance}>Walking</button>
-            <button name="distance" value="8046.72" onClick={this.setDistance}>5 Miles</button>
-            <button name="distance" value="32186.9" onClick={this.setDistance}>20 Miles</button>
-          </div>
+          <PriceGrid setPrice={this.setPrice}/>
+          <DistanceGrid setDistance={this.setDistance}/>
           <input className="search-index-input" type="text" placeholder="Food Type or Restaurant Name (Optional)" ref={"searchBar"} />
 
         </div>
