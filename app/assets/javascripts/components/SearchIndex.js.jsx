@@ -56,8 +56,8 @@ class SearchIndex extends React.Component {
         watchId = navigator.geolocation.watchPosition(this.success,()=>{},optn);
       } else {
           alert('Geolocation is not supported in your browser');
-      } 
-      
+      }
+
     }
 
     success(position) {
@@ -65,7 +65,7 @@ class SearchIndex extends React.Component {
       this.state.lng = position.coords.longitude
       this.stopWatch();
     }
-   
+
     stopWatch() {
       if(watchId) {
         navigator.geolocation.clearWatch(watchId);
