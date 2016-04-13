@@ -18,27 +18,27 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :test do
-	gem 'simplecov'
-	gem 'database_cleaner'
-	gem 'shoulda-matchers'
-	gem 'selenium-webdriver'
-	gem 'capybara'
-	gem 'factory_girl_rails'
+	gem 'simplecov', '0.11.2'
+	gem 'database_cleaner', '1.5.1'
+	gem 'shoulda-matchers', '3.1.1'
+	gem 'selenium-webdriver', '2.53.0'
+	gem 'capybara', '2.7.0'
+	gem 'factory_girl_rails', '4.7.0'
 end
 
 group :development, :test do
-  gem 'pry'
-  gem 'faker'
-  gem 'populator'
-  gem 'rspec-rails'
-  gem 'better_errors'
-  gem 'awesome_print'
+  gem 'pry', '0.10.3'
+  gem 'faker', '1.6.3'
+  gem 'populator', '1.0.0'
+  gem 'rspec-rails', '3.4.2'
+  gem 'better_errors', '2.1.1'
+  gem 'awesome_print', '1.6.1'
 end
 
 group :development do
   gem 'web-console', '~> 2.0'
-  gem 'spring'
-  gem 'letter_opener'
+  gem 'spring', '1.7.1'
+  gem 'letter_opener', '1.4.1'
 end
 
 group :production do
