@@ -29,6 +29,7 @@
   padding-left: 25px;
   font-size: 1.1em;
   background-color: black;
+  height: 50px;
 }
 
 .search-index-buttons button:hover {
@@ -37,8 +38,4 @@
 
 .search-index-input {
   width: 99%;
-}
-
-.cuisine-button button {
-  background-color: black;
 }
