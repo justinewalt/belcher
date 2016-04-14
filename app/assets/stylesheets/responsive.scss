@@ -14,7 +14,7 @@
   }
 
   .hamburger-menu {
-    width: 100%;
+    width: 90%;
   }
 
 }
@@ -33,7 +33,21 @@
   }
 }
 
-@media (min-width: 1100px){
+@media (min-width: 701px) and (max-width: 999px) {
+  .ham-icon {
+    visibility: visible;
+  }
+
+  .nav-link {
+    visibility: visible;
+  }
+
+  .hamburger-menu {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1000px){
   .ham-icon {
     visibility: visible;
   }
