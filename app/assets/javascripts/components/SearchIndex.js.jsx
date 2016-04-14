@@ -148,7 +148,6 @@ class SearchIndex extends React.Component {
 //======================= render of the page ========================
   render() {
     this.geoloc();
-    debugger
     return(
       <div className="search-index-div">
         <div className="twelve columns text-center">
