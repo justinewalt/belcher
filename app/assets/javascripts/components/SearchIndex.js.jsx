@@ -14,6 +14,7 @@ class SearchIndex extends React.Component {
     this.geoloc = this.geoloc.bind(this);
     this.stopWatch = this.stopWatch.bind(this);
     this.success = this.success.bind(this);
+    let watchId = null;
   }
 
 //========================== SEARCH PARAMS ===============================
@@ -57,7 +58,6 @@ class SearchIndex extends React.Component {
 
   //=========== GEOLOCATION (FIND USERS LOCATION) ==============
     geoloc() {
-    let watchId = null;
       if (navigator.geolocation) {
         let optn = {
           enableHighAccuracy : true,
