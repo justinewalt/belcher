@@ -16,6 +16,7 @@ class SearchIndex extends React.Component {
     this.success = this.success.bind(this);
     this.newResult = this.newResult.bind(this);
     this.clickYes = this.clickYes.bind(this);
+    let watchId = null;
 
   }
 
@@ -68,34 +69,34 @@ class SearchIndex extends React.Component {
     });
   }
 
+  geoloc() {
+    if (navigator.geolocation) {
+      let optn = {
+        enableHighAccuracy : true,
+        timeout : Infinity,
+        maximumAge : 0
 
-  //=========== GEOLOCATION (FIND USERS LOCATION) ==============
-    geoloc() {
-      if (navigator.geolocation) {
-        let optn = {
-          enableHighAccuracy : true,
-          timeout : Infinity,
-          maximumAge : 0
-        }
-        watchId = navigator.geolocation.watchPosition(this.success,()=>{},optn);
-      } else {
-          alert('Geolocation is not supported in your browser');
       }
-
+      watchId = navigator.geolocation.watchPosition(this.success,()=>{},optn);
+    } else {
+        alert('Geolocation is not supported in your browser');
     }
 
-    success(position) {
-      this.state.lat = position.coords.latitude
-      this.state.lng = position.coords.longitude
-      this.stopWatch();
-    }
+  }
 
-    stopWatch() {
-      if(watchId) {
-        navigator.geolocation.clearWatch(watchId);
-        watchId = null;
-      }
+  success(position) {
+    this.state.lat = position.coords.latitude
+    this.state.lng = position.coords.longitude
+    this.stopWatch();
+  }
+
+  stopWatch() {
+    if(watchId) {
+      navigator.geolocation.clearWatch(watchId);
+      watchId = null;
     }
+  }
+
 
 
 // =========================== RESULTS =================================
@@ -147,6 +148,7 @@ class SearchIndex extends React.Component {
 //======================= render of the page ========================
   render() {
     this.geoloc();
+    debugger
     return(
       <div className="search-index-div">
         <div className="twelve columns text-center">
