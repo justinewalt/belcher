@@ -1,7 +1,7 @@
 class SearchIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {search: "", results: [], price: "3",
+    this.state = {search: "cafe", results: [], price: "3",
                  distance: "1609.34", searchValue: [],
                  toggleSearch: false, origin: "",
                  lat: 0.00, long: 0.00}
@@ -31,8 +31,10 @@ class SearchIndex extends React.Component {
 //======================== GET SPOTS (AJAX CALL)===========================
   getSpots(e) {
     e.preventDefault();
+    console.log(this.refs.searchBar.value);
     if (this.refs.searchBar.value != "") {
-      this.state.searchValue.push (`${this.refs.searchBar.value}|`)
+      this.state.searchValue.push (`${this.refs.searchBar.value}|`);
+      this.refs.searchBar.value = "";
     }
 
     $.ajax({
@@ -53,7 +55,7 @@ class SearchIndex extends React.Component {
   }
 
 
-  //=========== GeoLocation Code Starts Here ==============
+  //=========== GEOLOCATION (FIND USERS LOCATION) ==============
     geoloc() {
     let watchId = null;
       if (navigator.geolocation) {
@@ -81,7 +83,6 @@ class SearchIndex extends React.Component {
         watchId = null;
       }
     }
-  //============= GeoLocation Code Ends Here ================
 
 
 // =========================== RESULTS =================================
