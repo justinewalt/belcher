@@ -1,6 +1,7 @@
 class NavMenu extends React.Component {
   constructor(props){
-    super(props)
+    super(props);
+    this.sideNavLogin = this.sideNavLogin.bind(this);
   }
 
   menu(){
@@ -9,21 +10,45 @@ class NavMenu extends React.Component {
                 <div className="hamburger-content">
                   <p className="hamburger-text">
                     <i className="fa fa-user nav-icon"></i>
-                    <a> Profile</a>
+                    <a>Profile</a>
                   </p>
                   <p className="hamburger-text">
                     <i className="fa fa-filter nav-icon"></i>
-                    <a> Preferences</a>
+                    <a>Preferences</a>
                   </p>
                   <p className="hamburger-text">
                     <i className="fa fa-info-circle nav-icon"></i>
                     <a> About</a></p>
                   <p className="hamburger-text">
                   <i className="fa fa-envelope nav-icon"></i>
-                    <a>Contact</a></p>
+                  <a>Contact</a></p>
+                {this.sideNavLogin() }
                 </div>
              </div>
             );
+    }
+  }
+
+  sideNavLogin() {
+    if (this.props.userLogIn) {
+     return(
+        <div>
+          <p className="hamburger-text">
+            <i className="fa fa-sign-out nav-icon"></i>
+            <a data-method="delete" href={this.props.links.logOut}> Logout</a></p>
+        </div>
+        )
+    } else {
+      return(
+        <div>
+          <p className="hamburger-text">
+            <i className="fa fa-sign-in nav-icon"></i>
+            <a href={this.props.links.logIn}> Log In</a></p>
+          <p className="hamburger-text">
+            <i className="fa fa-user-plus nav-icon"></i>
+            <a href={this.props.links.signUp}>Sign Up</a></p>
+        </div>
+        )
     }
   }
 
