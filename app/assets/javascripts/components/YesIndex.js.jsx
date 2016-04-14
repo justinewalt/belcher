@@ -21,6 +21,6 @@ class YesIndex extends React.Component {
          <button>Facebook</button>
         </div>
       </div>
-    )
+    );
   }
 }

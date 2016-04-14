@@ -21,7 +21,6 @@ class Index extends React.Component {
         <About />
         <Contact />
         <Profile />
-        <YesIndex />
         <NavMenu isOpen={this.state.menuOpen}
                   links={this.props.links} 
                   userLogIn={this.props.userLogIn}
