@@ -58,7 +58,7 @@ class About extends React.Component {
                <i className="contact-fa fa fa-github"></i></a>
               <a href="https://www.linkedin.com/in/garrett-stott-4262b1104" target="_blank">
                <i className="contact-fa fa fa-linkedin-square"></i></a>
-              <a href="" target="_blank">
+              <a href="http://www.garrettstott.com" target="_blank">
                <i className="contact-fa fa fa-globe"></i></a>
           </div>
         </div>
