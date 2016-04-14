@@ -1,6 +1,6 @@
-class ResultsPage extends React.Component{
+class ResultsPage extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
@@ -14,7 +14,6 @@ class ResultsPage extends React.Component{
       }else if (price == 1) {
         price = 'Price: $'
       };
-
 
       return(
         <div className="text-center">
