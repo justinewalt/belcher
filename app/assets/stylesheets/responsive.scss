@@ -17,6 +17,10 @@
     width: 90%;
   }
 
+  .map_frame {
+    width: 80%;
+    height: 250px;
+  }
 }
 
 @media (min-width: 401px) and (max-width: 700px){
@@ -30,6 +34,11 @@
 
   .hamburger-menu {
     width: 55%;
+  }
+
+  .map_frame {
+    width: 80%;
+    height: 350px;
   }
 }
 

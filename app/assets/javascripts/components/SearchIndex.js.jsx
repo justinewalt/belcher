@@ -4,7 +4,7 @@ class SearchIndex extends React.Component {
     this.state = {search: "cafe", results: [], price: "3",
                  distance: "1609.34", searchValue: [],
                  toggleSearch: false, origin: "",
-                 lat: 0.00, long: 0.00}
+                 lat: 0.00, long: 0.00, result: {}, yes: false}
 
     this.setPrice = this.setPrice.bind(this);
     this.setDistance = this.setDistance.bind(this);
@@ -14,7 +14,9 @@ class SearchIndex extends React.Component {
     this.geoloc = this.geoloc.bind(this);
     this.stopWatch = this.stopWatch.bind(this);
     this.success = this.success.bind(this);
-    let watchId = null;
+    this.newResult = this.newResult.bind(this);
+    this.clickYes = this.clickYes.bind(this);
+
   }
 
 //========================== SEARCH PARAMS ===============================
@@ -27,6 +29,17 @@ class SearchIndex extends React.Component {
       searchValue.splice(index, 1)
     }
     this.setState({ searchValue: searchValue });
+  }
+//===== what happens when clicking yes ==================
+  clickYes() {
+    this.setState({results: [], yes: true})
+  }
+
+//============== what happens when you click no ===============
+  newResult() {
+    let index = this.state.results.findIndex( v => v === this.state.result )
+    this.state.results.splice(index, 1)
+    this.setState({result: this.state.results[Math.floor(Math.random()*this.state.results.length)]})
   }
 
 //======================== GET SPOTS (AJAX CALL)===========================
@@ -49,7 +62,7 @@ class SearchIndex extends React.Component {
     }).done(data => {
       this.setState({results: data.filtered_spots, search: "",
                     result: data.filtered_spots[Math.floor(Math.random()*data.filtered_spots.length)],
-                    origin: data.origin, rating: data.rating, icon: data.icon})
+                    origin: data.origin, distance_to: data.distance_to, time_to: data.time_to})
     }).fail(data => {
       console.log(data)
     });
@@ -88,7 +101,7 @@ class SearchIndex extends React.Component {
 // =========================== RESULTS =================================
   results() {
     if(this.state.results.length != 0){
-      let url = `https://www.google.com/maps/embed/v1/directions?key=AIzaSyBblRBZp_9JKVUeK-HKRcW4_EY160-CmeU&origin=${this.state.origin}&destination=${this.state.result.vicinity}`
+      let url = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBblRBZp_9JKVUeK-HKRcW4_EY160-CmeU&q=place_id:${this.state.result.place_id}`
       let price = this.state.result.price_level
       if (price == 3) {
         price = 'Price: $$$'
@@ -102,16 +115,13 @@ class SearchIndex extends React.Component {
         <div className="text-center">
           <h1>{this.state.result.name}</h1>
           <iframe
+            className="map_frame"
             width="650"
             height="500"
             frameBorder="0"
             src={url} allowFullScreen>
           </iframe>
-
-          <h4>Address: {this.state.result.vicinity}</h4>
-          <h4>{price}</h4>
-          <h4>Rating: {this.state.result.rating}</h4>
-
+          <h1>{this.state.result.type}</h1>
         </div>
       );
     }
@@ -140,6 +150,9 @@ class SearchIndex extends React.Component {
     return(
       <div className="search-index-div">
         <div className="twelve columns text-center">
+          <ResultsPage results={this.state.results} result={this.state.result} newResult={this.newResult} clickYes={this.clickYes}/>
+          <Yes result={this.state.result} yes={this.state.yes} />
+
           <div onClick={this.getSpots} className="find-food-button offset-by-four four columns">
             <p>Find Me Food</p>
           </div>
@@ -152,9 +165,7 @@ class SearchIndex extends React.Component {
           <PriceGrid setPrice={this.setPrice}/>
           <DistanceGrid setDistance={this.setDistance}/>
           <input className="search-index-input" type="text" placeholder="Food Type or Restaurant Name (Optional)" ref={"searchBar"} />
-
         </div>
-        {this.results()}
       </div>
     );
   }
