@@ -49,7 +49,7 @@ class SearchIndex extends React.Component {
       this.state.searchValue.push (`${this.refs.searchBar.value}|`);
       this.refs.searchBar.value = "";
     }
-
+    this.state.yes = false
     $.ajax({
       url: '/search',
       type: 'GET',
