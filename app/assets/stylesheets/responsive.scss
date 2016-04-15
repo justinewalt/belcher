@@ -2,21 +2,12 @@
   .nav-link {
     display: none;
   }
-
-  .hamburger-menu {
-    width: 70%;
-  }
 }
 
 @media (min-width: 320px) and (max-width: 400px){
   .nav-link {
     display: none;
   }
-
-  .hamburger-menu {
-    width: 90%;
-  }
-
 }
 
 @media (min-width: 401px) and (max-width: 700px){
@@ -26,10 +17,6 @@
 
   .nav-link {
     visibility: visible;
-  }
-
-  .hamburger-menu {
-    width: 55%;
   }
 }
 
@@ -41,10 +28,6 @@
   .nav-link {
     visibility: visible;
   }
-
-  .hamburger-menu {
-    width: 30%;
-  }
 }
 
 @media (min-width: 1000px){
@@ -54,8 +37,5 @@
 
   .nav-link {
     visibility: visible;
-  }
-  .hamburger-menu {
-    width: 25%
   }
 }
