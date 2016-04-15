@@ -50,7 +50,6 @@ class SearchIndex extends React.Component {
     e.preventDefault();
     if (this.refs.searchBar.value != "") {
       this.state.searchValue.push (`${this.refs.searchBar.value}|`);
-      this.refs.searchBar.value = "";
     }
     if (this.state.searchValue.length === 0) {
       this.state.searchValue.push ("food")
