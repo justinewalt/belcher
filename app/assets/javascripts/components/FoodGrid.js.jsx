@@ -8,7 +8,7 @@ class FoodGrid extends React.Component {
       <div className="twelve columns">
         <div className="food-button-input search-index-buttons">
           <FoodButton handleClick={this.props.searchParams} name="American" />
-          <FoodButton handleClick={this.props.searchParams} name="Bar" />
+          <FoodButton handleClick={this.props.searchParams} name="Drinks" />
           <FoodButton handleClick={this.props.searchParams} name="Chinese" />
           <FoodButton handleClick={this.props.searchParams} name="French" />
           <FoodButton handleClick={this.props.searchParams} name="German" />
