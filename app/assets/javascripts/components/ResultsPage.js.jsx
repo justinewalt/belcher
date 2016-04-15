@@ -20,6 +20,7 @@ class ResultsPage extends React.Component {
           <h1>{this.props.result.name}</h1>
 
           <img src={url} />
+          <p>Would you like to eat here?</p>
           <br />
           <br />
           <button onClick={this.props.newResult}>No</button>

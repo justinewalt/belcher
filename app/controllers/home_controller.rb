@@ -8,17 +8,14 @@ class HomeController < ApplicationController
     distance = params["distance"].to_i
     lat = params["lat"].to_f
     long = params["lng"].to_f
-    origin = Geocoder.search("#{lat}, #{long}").first.formatted_address
     search_params = params["search"].join("| ")
     @origin = Geocoder.search("#{lat}, #{long}").first.formatted_address
 
-    spots = @client.spots(lat, long, :radius =>  distance, :name => search_params,
+    spots = @client.spots( lat, long, :radius =>  distance, :name => search_params,
                           :types => ['restaurant', 'food', 'meal_takeaway', 'meal_delivery', 'cafe', 'bakery'],
                           :exclude => ['grocery_or_supermarket'] )
-
     spots = spots.reject { |spot| spot.price_level.to_i > price}
     filtered_spots = spots.reject { |spot| spot.opening_hours == false}
-
     render json: {filtered_spots: filtered_spots, origin: @origin}
   end
 
