@@ -5,8 +5,7 @@ class About extends React.Component {
 
   render() {
     return (
-      <div className="twelve columns">
-      <hr />
+      <div className="twelve columns creators-div">
         <h3 className="text-center">About</h3>
           <div className="container about-text">
             <p>What is Belcher?</p>
@@ -21,7 +20,7 @@ class About extends React.Component {
             <p>Special thanks to <a href="http://www.devpointlabs.com/">DevPoint Labs!</a></p>
             <p>Enjoy!</p>
           </div>
-        <div className="text-center">
+        <div className="container creators-div text-center">
           <h3>Creators</h3>
           <div className="about-info three columns">
             <h4 className="about-first">Justin</h4>
