@@ -114,7 +114,9 @@ class SearchIndex extends React.Component {
   searchFields() {
     if (this.state.toggleSearch)
       return(
-        <FoodGrid searchParams={this.searchParams}/>
+        <FoodGrid searchParams={this.searchParams}
+                  searchValue={this.state.searchValue}
+                  />
       )
   }
 
