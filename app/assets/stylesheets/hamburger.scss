@@ -1,8 +1,8 @@
 .hamburger-menu {
   background-color: black ;
   position: absolute;
-  height: 100vh;
   width: 300px;
+  z-index: 3;
 }
 
 .ham-icon {
@@ -23,7 +23,8 @@
 .hamburger-content {
   font-size: 2em;
   margin-left: 9%;
-  padding-top: 30%;
+  padding-top: 15%;
+  padding-bottom: 15%;
   color: black;
   cursor: pointer;
 }

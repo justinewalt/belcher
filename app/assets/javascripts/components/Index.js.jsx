@@ -8,9 +8,6 @@ class Index extends React.Component {
      return(
       <div>
         <SearchIndex />
-        <About />
-        <Contact />
-        <Profile />
       </div>
     );
   }
