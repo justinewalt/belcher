@@ -10,8 +10,14 @@
   }
 
   .map_frame {
-    width: 80%;
+    width: 90%;
     height: 250px;
+  }
+
+  .result_image {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
   }
 }
 
@@ -25,8 +31,14 @@
   }
 
   .map_frame {
-    width: 80%;
+    width: 90%;
     height: 350px;
+  }
+
+  .result_image {
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
   }
 }
 
@@ -38,6 +50,12 @@
   .nav-link {
     visibility: visible;
   }
+
+  .result_image {
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+  }
 }
 
 @media (min-width: 1000px){
@@ -47,5 +65,11 @@
 
   .nav-link {
     visibility: visible;
+  }
+
+  .result_image {
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
   }
 }
