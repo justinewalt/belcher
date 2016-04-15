@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   post 'contact_us', to: 'contact_us#new_contact'
 
   get '/search', to: 'home#search'
+  get '/about', to: 'about#index'
+  get '/profile', to: 'profile#show'
+  get '/contact', to: 'contact_us#index'
 end
