@@ -10,7 +10,7 @@ class NavMenu extends React.Component {
                 <div className="hamburger-content">
                   <p className="hamburger-text">
                     <i className="fa fa-user nav-icon"></i>
-                    <a>Profile</a>
+                    <a href='/profile'>Profile</a>
                   </p>
                   <p className="hamburger-text">
                     <i className="fa fa-filter nav-icon"></i>
@@ -18,10 +18,10 @@ class NavMenu extends React.Component {
                   </p>
                   <p className="hamburger-text">
                     <i className="fa fa-info-circle nav-icon"></i>
-                    <a> About</a></p>
+                    <a href='/about'> About</a></p>
                   <p className="hamburger-text">
                   <i className="fa fa-envelope nav-icon"></i>
-                  <a>Contact</a></p>
+                  <a href='/contact'>Contact</a></p>
                 {this.sideNavLogin() }
                 </div>
              </div>
