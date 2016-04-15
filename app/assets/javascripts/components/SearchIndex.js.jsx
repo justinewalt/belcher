@@ -1,8 +1,8 @@
 class SearchIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {search: "cafe", results: [], price: "3",
-                 distance: "600", searchValue: [],
+    this.state = {search: "", results: [], price: "3",
+                 distance: "8046", searchValue: [],
                  toggleSearch: false, origin: "",
                  lat: 0.00, lng: 0.00, result: {}, yes: false}
 
@@ -22,6 +22,9 @@ class SearchIndex extends React.Component {
 //========================== SEARCH PARAMS ===============================
   searchParams(search, checked) {
     let searchValue = this.state.searchValue;
+    if (searchValue[0] == "food"){
+      searchValue = []
+    }
     if (checked) {
       searchValue.push(search)
     }else {
@@ -48,6 +51,9 @@ class SearchIndex extends React.Component {
     if (this.refs.searchBar.value != "") {
       this.state.searchValue.push (`${this.refs.searchBar.value}|`);
       this.refs.searchBar.value = "";
+    }
+    if (this.state.searchValue.length === 0) {
+      this.state.searchValue.push ("food")
     }
     this.state.yes = false
     $.ajax({
