@@ -15,7 +15,7 @@ class FoodButton extends React.Component {
         backgroundColor: '#33C3F0'      }
     }else{
       style = {
-        backgroundColor: '#222'
+        backgroundColor: '#000'
       }
     }
     return (
