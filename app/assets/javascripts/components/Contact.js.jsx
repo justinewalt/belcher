@@ -23,7 +23,6 @@ class Contact extends React.Component {
   render() {
     return (
       <div className="twelve columns text-center">
-      <hr />
         <h3>Contact</h3>
         <p>Happy? Sad? Indifferent?</p>
         <p>Send us a message.</p>
