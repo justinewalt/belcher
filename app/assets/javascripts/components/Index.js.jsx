@@ -18,9 +18,6 @@ class Index extends React.Component {
                     toggleMenuOpen={this.toggleMenuOpen}
                     />
         <SearchIndex />
-        <About />
-        <Contact />
-        <Profile />
         <NavMenu isOpen={this.state.menuOpen}
                   links={this.props.links} 
                   userLogIn={this.props.userLogIn}

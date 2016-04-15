@@ -4,4 +4,7 @@ class ContactUsController < ApplicationController
     flash[:notice] = "Your Message has been sent!"
     redirect_to root_path
   end
+
+  def index
+  end
 end
