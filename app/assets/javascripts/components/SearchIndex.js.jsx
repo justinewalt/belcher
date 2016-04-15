@@ -2,9 +2,9 @@ class SearchIndex extends React.Component {
   constructor(props) {
     super(props);
     this.state = {search: "cafe", results: [], price: "3",
-                 distance: "1609.34", searchValue: [],
+                 distance: "600", searchValue: [],
                  toggleSearch: false, origin: "",
-                 lat: 0.00, long: 0.00, result: {}, yes: false}
+                 lat: 0.00, lng: 0.00, result: {}, yes: false}
 
     this.setPrice = this.setPrice.bind(this);
     this.setDistance = this.setDistance.bind(this);
@@ -16,7 +16,6 @@ class SearchIndex extends React.Component {
     this.success = this.success.bind(this);
     this.newResult = this.newResult.bind(this);
     this.clickYes = this.clickYes.bind(this);
-    let watchId = null;
 
   }
 
@@ -46,7 +45,6 @@ class SearchIndex extends React.Component {
 //======================== GET SPOTS (AJAX CALL)===========================
   getSpots(e) {
     e.preventDefault();
-    console.log(this.refs.searchBar.value);
     if (this.refs.searchBar.value != "") {
       this.state.searchValue.push (`${this.refs.searchBar.value}|`);
       this.refs.searchBar.value = "";
@@ -85,8 +83,7 @@ class SearchIndex extends React.Component {
   }
 
   success(position) {
-    this.state.lat = position.coords.latitude
-    this.state.lng = position.coords.longitude
+    this.setState({lat: position.coords.latitude, lng: position.coords.longitude})
     this.stopWatch();
   }
 
@@ -97,36 +94,6 @@ class SearchIndex extends React.Component {
     }
   }
 
-
-
-// =========================== RESULTS =================================
-  results() {
-    if(this.state.results.length != 0){
-      let url = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBblRBZp_9JKVUeK-HKRcW4_EY160-CmeU&q=place_id:${this.state.result.place_id}`
-      let price = this.state.result.price_level
-      if (price == 3) {
-        price = 'Price: $$$'
-      }else if (price == 2) {
-        price = 'Price: $$'
-      }else if (price == 1) {
-        price = 'Price: $'
-      };
-
-      return(
-        <div className="text-center">
-          <h1>{this.state.result.name}</h1>
-          <iframe
-            className="map_frame"
-            width="650"
-            height="500"
-            frameBorder="0"
-            src={url} allowFullScreen>
-          </iframe>
-          <h1>{this.state.result.type}</h1>
-        </div>
-      );
-    }
-  }
 
 //============== sets the price ===========================
   setPrice(value) {

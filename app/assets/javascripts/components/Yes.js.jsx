@@ -16,7 +16,7 @@ class Yes extends React.Component {
             frameBorder="0"
             src={url} allowFullScreen>
           </iframe>
-          <p>hells yeah!!</p>
+          <p>ohhhhh yeah!!</p>
         </div>
       );
     }else {
