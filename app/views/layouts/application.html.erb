@@ -10,7 +10,16 @@
 </head>
 <body>  
   <%= render 'layouts/messages' %>
+  <%= react_component 'Navigation', 
+                         links: 
+                           { belcher: root_path,
+                             logOut: destroy_user_session_path,
+                             preferences: "",
+                             profile: "",
+                             signUp: new_user_registration_path,
+                             logIn: new_user_session_path
+                            },
+                         userLogIn: user_signed_in? %>
   <%= yield %>
-
 </body>
 </html>
