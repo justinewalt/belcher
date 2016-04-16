@@ -22,15 +22,16 @@ class Yes extends React.Component {
           <h1>{this.props.result.name}</h1>
           <img src={url} className="map_frame"></img>
           <div className="map-div ">
-            <div className="offset-by-three three columns mid-div">
+            <div className="offset-by-three two columns left-div">
               <p className="direction-text">Get Directions</p>
               <a className="fa fa-chevron-circle-right" href={href}></a>
             </div>
-            <div className="two columns">
+            <div className="two columns mid-div">
               <p className="map-div-text">{this.props.result.vicinity}</p>
             </div>
-            <div className="three columns ">
-              <p className="map-div-text2">Rating: {this.props.result.rating} {price}</p>
+            <div className="three columns right-div">
+              <p className="map-div-text2">{price}</p>
+              <p className="map-div-text2">Rating: {this.props.result.rating}</p>
             </div>
           </div>
         </div>
