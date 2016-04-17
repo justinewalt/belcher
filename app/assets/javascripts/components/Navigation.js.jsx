@@ -37,6 +37,4 @@ class Navigation extends React.Component {
       </div>
     );
   }
-
-  
 }
