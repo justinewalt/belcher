@@ -46,7 +46,7 @@ class NavMenu extends React.Component {
             <i className="fa fa-user-plus nav-icon"></i>
             <a href={this.props.links.signUp}>Sign Up</a></p>
         </div>
-        )
+      )
     }
   }
 
