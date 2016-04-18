@@ -5,6 +5,8 @@
   margin: 50px 0 50px 0;
   border-radius: 20px;
   border: 1px solid black;
+  box-shadow: 0px 5px 5px #222;
+
 }
 
 .find-food-button p {
@@ -38,4 +40,5 @@
 
 .search-index-input {
   width: 99%;
+
 }
