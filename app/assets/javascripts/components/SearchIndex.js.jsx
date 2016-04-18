@@ -4,7 +4,8 @@ class SearchIndex extends React.Component {
     this.state = {search: "", results: [], price: "3",
                  distance: "8046", searchValue: [],
                  toggleSearch: false, origin: "",
-                 lat: 0.00, lng: 0.00, result: {}, yes: false}
+                 lat: 0.00, lng: 0.00, result: {},
+                 yes: false, searched: false}
 
     this.setPrice = this.setPrice.bind(this);
     this.setDistance = this.setDistance.bind(this);
@@ -17,13 +18,13 @@ class SearchIndex extends React.Component {
     this.newResult = this.newResult.bind(this);
     this.clickYes = this.clickYes.bind(this);
     this.autoComplete = this.autoComplete.bind(this);
-
+    this.foodButtons = this.foodButtons.bind(this);
   }
 
 //========================== SEARCH PARAMS ===============================
   searchParams(search, checked) {
     let searchValue = this.state.searchValue;
-    if (searchValue[0] == "food"){
+    if (searchValue[0] == "restaurant"){
       searchValue = []
     }
     if (checked) {
@@ -67,7 +68,7 @@ class SearchIndex extends React.Component {
     }).done(data => {
       this.setState({results: data.filtered_spots, search: "",
                     result: data.filtered_spots[Math.floor(Math.random()*data.filtered_spots.length)],
-                    origin: data.origin, distance_to: data.distance_to, time_to: data.time_to})
+                    origin: data.origin, distance_to: data.distance_to, time_to: data.time_to, searched: true})
     }).fail(data => {
       console.log(data)
     });
@@ -113,14 +114,34 @@ class SearchIndex extends React.Component {
     this.setState({distance: value});
   }
 
+  foodButtons() {
+    if(this.state.searched === false) {
+      return(
+        <div>
+          <div onClick={this.getSpots} className="find-food-button offset-by-four four columns">
+            <p>Find Me Food</p>
+          </div>
+          <div className="twelve columns">
+            <button type='button' onClick={() => this.setState({toggleSearch: !this.state.toggleSearch})}>Popular Cuisines</button>
+            <br />
+            <br />
+            {this.searchFields()}
+          </div>
+          <PriceGrid setPrice={this.setPrice}/>
+          <DistanceGrid setDistance={this.setDistance}/>
+          <input className="search-index-input" type="text" placeholder="Food Type or Restaurant Name (Optional)" ref={"searchBar"} />
+        </div>
+      );
+    }
+  }
+
 //============ toggles the search fields ======================
   searchFields() {
-    if (this.state.toggleSearch)
+    if (this.state.toggleSearch) {
       return(
-        <FoodGrid searchParams={this.searchParams}
-                  searchValue={this.state.searchValue}
-                  />
+        <FoodGrid searchParams={this.searchParams} searchValue={this.state.searchValue}/>
       )
+    }
   }
 
 //======================= Script to run search Autocomplete via Google ========================
@@ -149,24 +170,9 @@ class SearchIndex extends React.Component {
         <div className="twelve columns text-center">
           <ResultsPage results={this.state.results} result={this.state.result} newResult={this.newResult} clickYes={this.clickYes}/>
           <Yes result={this.state.result} yes={this.state.yes} />
-
-          <div onClick={this.getSpots} className="find-food-button offset-by-four four columns">
-            <p>Find Me Food</p>
-          </div>
-          <div className="twelve columns">
-            <button type='button' onClick={() => this.setState({toggleSearch: !this.state.toggleSearch})}>Popular Cuisines</button>
-            <br />
-            <br />
-            {this.searchFields()}
-          </div>
-          <PriceGrid setPrice={this.setPrice}/>
-          <DistanceGrid setDistance={this.setDistance}/>
-          <input onChange={this.autoComplete} id="input-autocomplete" className="search-index-input" type="text" placeholder="Food Type or Restaurant Name (Optional)" ref={"searchBar"} />
-
+          {this.foodButtons()}
         </div>
       </div>
     );
   }
 }
-
-

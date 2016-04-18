@@ -24,7 +24,7 @@ class Yes extends React.Component {
           <div className="map-div ">
             <div className="offset-by-three two columns left-div">
               <p className="direction-text">Get Directions</p>
-              <a className="fa fa-chevron-circle-right" href={href}></a>
+              <a className="fa fa-chevron-circle-right" href={href} target="_blank"></a>
             </div>
             <div className="two columns mid-div">
               <p className="map-div-text">{this.props.result.vicinity}</p>

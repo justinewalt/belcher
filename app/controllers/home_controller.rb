@@ -12,7 +12,7 @@ class HomeController < ApplicationController
     @origin = Geocoder.search("#{lat}, #{long}").first.formatted_address
 
     spots = @client.spots( lat, long, :radius =>  distance, :name => search_params,
-                          :types => ['restaurant', 'food', 'meal_takeaway', 'meal_delivery', 'cafe', 'bakery', 'bar'],
+                          :types => ['restaurant', 'meal_takeaway', 'meal_delivery', 'cafe', 'bakery', 'bar'],
                           :exclude => ['grocery_or_supermarket'] )
     spots = spots.reject { |spot| spot.price_level.to_i > price}
     filtered_spots = spots.reject { |spot| spot.opening_hours == false || spot.opening_hours == nil}
