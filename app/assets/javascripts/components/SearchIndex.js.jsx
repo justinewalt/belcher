@@ -51,7 +51,6 @@ class SearchIndex extends React.Component {
     e.preventDefault();
     if (this.refs.searchBar.value != "") {
       this.state.searchValue.push (`${this.refs.searchBar.value}|`);
-      this.refs.searchBar.value = "";
     }
     if (this.state.searchValue.length === 0) {
       this.state.searchValue.push ("food")
@@ -118,7 +117,9 @@ class SearchIndex extends React.Component {
   searchFields() {
     if (this.state.toggleSearch)
       return(
-        <FoodGrid searchParams={this.searchParams}/>
+        <FoodGrid searchParams={this.searchParams}
+                  searchValue={this.state.searchValue}
+                  />
       )
   }
 
