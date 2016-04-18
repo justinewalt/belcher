@@ -70,7 +70,7 @@ class SearchIndex extends React.Component {
                     result: data.filtered_spots[Math.floor(Math.random()*data.filtered_spots.length)],
                     origin: data.origin, distance_to: data.distance_to, time_to: data.time_to, searched: true})
     }).fail(data => {
-      console.log(data)
+      console.log("Search Error")
     });
   }
 
