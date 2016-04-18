@@ -26,7 +26,7 @@ class NavMenu extends React.Component {
   sideNavLogin() {
     if (this.props.userLogIn) {
      return(
-      <nav key='nav'>
+      <nav>
         <p className="hamburger-text">
           <i className="fa fa-user nav-icon"></i>
           <a> Profile</a></p>

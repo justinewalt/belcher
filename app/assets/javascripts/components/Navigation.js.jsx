@@ -33,10 +33,10 @@ class Navigation extends React.Component {
           <h2 className="logo"><a href={this.props.links.belcher}>Belcher</a></h2>
           {links}
         </div>
-        <div>
-        <ReactCSSTransitionGroup transitionName="toggle-slide" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
+        <div className="nav-menu">
+          <ReactCSSTransitionGroup transitionName="toggle-slide" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
           <NavMenu isOpen={this.state.menuOpen} links={this.props.links} userLogIn={this.props.userLogIn} key="navmenu" />
-        </ReactCSSTransitionGroup>
+          </ReactCSSTransitionGroup>
         </div>
       </div>
     );

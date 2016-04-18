@@ -6,6 +6,11 @@
   z-index: 3;
 }
 
+.nav-menu {
+    transition: width 2s;
+    transition-timing-function: ease-in;
+}
+
 .ham-icon {
   margin: 14px 1% 0 2%;
   color: white;
