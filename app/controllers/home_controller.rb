@@ -19,6 +19,11 @@ class HomeController < ApplicationController
     render json: {filtered_spots: filtered_spots, origin: @origin}
   end
 
+  def autocomplete
+    @results = @client.spots_by_query(params[:input])
+    render json: @results
+  end
+
   private
 
     def client
