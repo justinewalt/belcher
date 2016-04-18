@@ -1,3 +1,5 @@
+// var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
+
 class NavMenu extends React.Component {
   constructor(props){
     super(props);
@@ -24,7 +26,8 @@ class NavMenu extends React.Component {
   sideNavLogin() {
     if (this.props.userLogIn) {
      return(
-        <div>
+      <ReactCSSTransitionGroup transitionName="example" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
+        <nav key='nav'>
           <p className="hamburger-text">
             <i className="fa fa-user nav-icon"></i>
             <a> Profile</a></p>
@@ -34,18 +37,19 @@ class NavMenu extends React.Component {
           <p className="hamburger-text">
             <i className="fa fa-sign-out nav-icon"></i>
             <a data-method="delete" href={this.props.links.logOut}> Logout</a></p>
-        </div>
+        </nav>
+      </ReactCSSTransitionGroup>
         )
     } else {
       return(
-        <div>
+        <nav>
           <p className="hamburger-text">
             <i className="fa fa-sign-in nav-icon"></i>
             <a href={this.props.links.logIn}> Log In</a></p>
           <p className="hamburger-text">
             <i className="fa fa-user-plus nav-icon"></i>
             <a href={this.props.links.signUp}>Sign Up</a></p>
-        </div>
+        </nav>
       )
     }
   }

@@ -8,19 +8,21 @@
   <%= csrf_meta_tags %>
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400"/>
 </head>
-<body>  
-  <%= react_component 'Navigation', 
-                         links: 
-                           { belcher: root_path,
-                             logOut: destroy_user_session_path,
-                             preferences: "",
-                             profile: "",
-                             signUp: new_user_registration_path,
-                             logIn: new_user_session_path
-                            },
-                         userLogIn: user_signed_in? %>
-  <%= render 'layouts/messages' %>
-  <%= yield %>
-  <%= render 'layouts/footer' %>
+<body>
+  <div id='st-container' class='st-container'>
+    <%= react_component 'Navigation', 
+                           links: 
+                             { belcher: root_path,
+                               logOut: destroy_user_session_path,
+                               preferences: "",
+                               profile: "",
+                               signUp: new_user_registration_path,
+                               logIn: new_user_session_path
+                              },
+                           userLogIn: user_signed_in? %>
+    <%= render 'layouts/messages' %>
+    <%= yield %>
+    <%= render 'layouts/footer' %>
+  </div>
 </body>
 </html>

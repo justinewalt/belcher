@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require react
 //= require react_ujs
+//= require react-addons-css-transition-group
 //= require_tree .
