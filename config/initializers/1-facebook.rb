@@ -1,4 +1,4 @@
-if Rails.env.development?
+if Rails.env.development? || Rails.env.test?
   begin 
     YAML.load(File.read('config/facebook_omniauth_creds.yml')).each do |key, value| ENV[key] = value
     end
