@@ -9,14 +9,6 @@ class NavMenu extends React.Component {
       return(<div className="hamburger-menu">
                 <div className="hamburger-content">
                   <p className="hamburger-text">
-                    <i className="fa fa-user nav-icon"></i>
-                    <a href='/profile'>Profile</a>
-                  </p>
-                  <p className="hamburger-text">
-                    <i className="fa fa-filter nav-icon"></i>
-                    <a>Preferences</a>
-                  </p>
-                  <p className="hamburger-text">
                     <i className="fa fa-info-circle nav-icon"></i>
                     <a href='/about'> About</a></p>
                   <p className="hamburger-text">
@@ -34,6 +26,12 @@ class NavMenu extends React.Component {
      return(
         <div>
           <p className="hamburger-text">
+            <i className="fa fa-user nav-icon"></i>
+            <a> Profile</a></p>
+          <p className="hamburger-text">
+            <i className="fa fa-filter nav-icon"></i>
+            <a> Preferences</a></p> 
+          <p className="hamburger-text">
             <i className="fa fa-sign-out nav-icon"></i>
             <a data-method="delete" href={this.props.links.logOut}> Logout</a></p>
         </div>
@@ -48,7 +46,7 @@ class NavMenu extends React.Component {
             <i className="fa fa-user-plus nav-icon"></i>
             <a href={this.props.links.signUp}>Sign Up</a></p>
         </div>
-        )
+      )
     }
   }
 
