@@ -26,20 +26,18 @@ class NavMenu extends React.Component {
   sideNavLogin() {
     if (this.props.userLogIn) {
      return(
-      <ReactCSSTransitionGroup transitionName="example" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
-        <nav key='nav'>
-          <p className="hamburger-text">
-            <i className="fa fa-user nav-icon"></i>
-            <a> Profile</a></p>
-          <p className="hamburger-text">
-            <i className="fa fa-filter nav-icon"></i>
-            <a> Preferences</a></p> 
-          <p className="hamburger-text">
-            <i className="fa fa-sign-out nav-icon"></i>
-            <a data-method="delete" href={this.props.links.logOut}> Logout</a></p>
-        </nav>
-      </ReactCSSTransitionGroup>
-        )
+      <nav key='nav'>
+        <p className="hamburger-text">
+          <i className="fa fa-user nav-icon"></i>
+          <a> Profile</a></p>
+        <p className="hamburger-text">
+          <i className="fa fa-filter nav-icon"></i>
+          <a> Preferences</a></p> 
+        <p className="hamburger-text">
+          <i className="fa fa-sign-out nav-icon"></i>
+          <a data-method="delete" href={this.props.links.logOut}> Logout</a></p>
+      </nav>
+      )
     } else {
       return(
         <nav>

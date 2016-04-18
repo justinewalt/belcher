@@ -1,3 +1,5 @@
+let ReactCSSTransitionGroup = 'react-addons-css-transition-group';
+
 class Navigation extends React.Component {
   constructor(props) {
     super(props);
@@ -32,7 +34,9 @@ class Navigation extends React.Component {
           {links}
         </div>
         <div>
-          <NavMenu isOpen={this.state.menuOpen} links={this.props.links} userLogIn={this.props.userLogIn}  />
+        <ReactCSSTransitionGroup transitionName="toggle-slide" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
+          <NavMenu isOpen={this.state.menuOpen} links={this.props.links} userLogIn={this.props.userLogIn} key="navmenu" />
+        </ReactCSSTransitionGroup>
         </div>
       </div>
     );
