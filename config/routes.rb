@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   get '/about', to: 'about#index'
   get '/profile', to: 'profile#show'
   get '/contact', to: 'contact_us#index'
+  get '/autocomplete', to: 'home#autocomplete'
 end

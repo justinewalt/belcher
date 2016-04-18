@@ -16,6 +16,7 @@ class SearchIndex extends React.Component {
     this.success = this.success.bind(this);
     this.newResult = this.newResult.bind(this);
     this.clickYes = this.clickYes.bind(this);
+    this.autoComplete = this.autoComplete.bind(this);
 
   }
 
@@ -73,6 +74,9 @@ class SearchIndex extends React.Component {
     });
   }
 
+//============== Geolocation via html5 geolocator ===========================
+
+
   geoloc() {
     if (navigator.geolocation) {
       let optn = {
@@ -118,6 +122,25 @@ class SearchIndex extends React.Component {
       )
   }
 
+//======================= Script to run search Autocomplete via Google ========================
+  autoComplete(){
+    $.ajax({
+      url: '/autocomplete',
+      type: 'GET',
+      data: {input: this.refs.searchBar.value}
+    }).success(data => {
+      debugger
+    }).error(data => {
+    });
+                // var places = new google.maps.place.Autocomplete(document.getElementById('#input-autocomplete'));
+                // google.maps.event.addListener(places, 'place_changed', function() {
+                //   var place = places.getPlace();
+                //   var address = place.formatted_address;
+                //   var latitude = place.geometry.location.lat();
+                //   var longitude = place.geometry.location.lng();
+                // });
+  }
+
 //======================= render of the page ========================
   render() {
     this.geoloc();
@@ -138,9 +161,12 @@ class SearchIndex extends React.Component {
           </div>
           <PriceGrid setPrice={this.setPrice}/>
           <DistanceGrid setDistance={this.setDistance}/>
-          <input className="search-index-input" type="text" placeholder="Food Type or Restaurant Name (Optional)" ref={"searchBar"} />
+          <input onChange={this.autoComplete} id="input-autocomplete" className="search-index-input" type="text" placeholder="Food Type or Restaurant Name (Optional)" ref={"searchBar"} />
+
         </div>
       </div>
     );
   }
 }
+
+
