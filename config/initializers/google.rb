@@ -1,4 +1,4 @@
-if Rails.env.development?
+if Rails.env.development? || Rails.env.test?
   config = "#{Rails.root}/config/google.yml"
   if File.exists? config
     google = YAML.load_file(config)

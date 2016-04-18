@@ -1,4 +1,4 @@
-if Rails.env.development?
+if Rails.env.development? || Rails.env.test?
   begin
    mail = "#{Rails.root}/config/contact.yml"
    YAML.load_file(mail).each do |key, value|
