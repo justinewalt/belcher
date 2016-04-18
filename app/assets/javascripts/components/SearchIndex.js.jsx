@@ -130,7 +130,6 @@ class SearchIndex extends React.Component {
       type: 'GET',
       data: {input: this.refs.searchBar.value}
     }).success(data => {
-      debugger
     }).error(data => {
     });
                 // var places = new google.maps.place.Autocomplete(document.getElementById('#input-autocomplete'));
