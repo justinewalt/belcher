@@ -1,12 +1,16 @@
 <div class="row">
   <div class="footer twelve columns">
-    <ul class="copy">
-      <p><a href='/'><li>&copy BelcherApp</li></a></p>
-    </ul>
-    <ul class="copy footer-links">
-    <%= social_share_button_tag(@posts, :url => "http://belcher.herokuapp.com", :popup => "true") %>
-      <p><a href='/contact'><li>Contact</li></a></p>
-      <p><a href='/about'><li>About</li></a></p>
-    </ul>
+    <div class="footer-links-div twelve columns">
+      <ul class="copy copy-links">
+        <p><a href='/'><li>&copy BelcherApp</li></a></p>
+      </ul>
+      <ul class="copy footer-links">
+        <p><a href='/contact'><li>Contact</li></a></p>
+        <p><a href='/about'><li>About</li></a></p>
+      </ul>
+    </div>
+    <div class="social-links two columns offset-by six">
+      <%= social_share_button_tag(@posts, :url => "http://belcher.herokuapp.com", :popup => "true") %>
+    </div>
   </div>
 </div>
