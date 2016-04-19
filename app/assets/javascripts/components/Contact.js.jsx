@@ -15,6 +15,7 @@ class Contact extends React.Component {
       this.refs.email.value = null;
       this.refs.subject.value = null;
       this.refs.message.value = null;
+      window.location.assign('/')
     }).fail( error => {
       console.log(error);
     });
