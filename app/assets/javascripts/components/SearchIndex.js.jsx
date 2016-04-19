@@ -117,19 +117,19 @@ class SearchIndex extends React.Component {
   foodButtons() {
     if(this.state.searched === false) {
       return(
-        <div>
+        <div className="container">
           <div onClick={this.getSpots} className="find-food-button offset-by-four four columns">
             <p>Find Me Food</p>
           </div>
           <div className="twelve columns">
-            <button type='button' onClick={() => this.setState({toggleSearch: !this.state.toggleSearch})}>Popular Cuisines</button>
+            <button className="popular-cuisines" type='button' onClick={() => this.setState({toggleSearch: !this.state.toggleSearch})}>Popular Cuisines</button>
             <br />
             <br />
             {this.searchFields()}
           </div>
           <PriceGrid setPrice={this.setPrice}/>
           <DistanceGrid setDistance={this.setDistance}/>
-          <input className="search-index-input" type="text" placeholder="Food Type or Restaurant Name (Optional)" ref={"searchBar"} />
+          <input className="search-index-input" type="text" placeholder="Food Type or Restaurant Name (Optional)" ref={"searchBar"} /> 
         </div>
       );
     }

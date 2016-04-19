@@ -22,15 +22,11 @@
   padding: 0;
 }
 
-.search-index-buttons button {
-  width: 33%;
-  padding-left: 25px;
-  font-size: 1.1em;
-  background-color: black;
-  height: 50px;
-}
-
 .search-index-input {
   width: 99%;
+}
 
+.popular-cuisines {
+  border-radius: 4px;
+  padding: 0 5px 0 5px;
 }
