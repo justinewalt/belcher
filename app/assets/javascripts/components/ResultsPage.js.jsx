@@ -8,7 +8,7 @@ class ResultsPage extends React.Component {
       if (this.props.result.photos[0] !== undefined ) {
         url = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${this.props.result.photos[0].photo_reference}&key=AIzaSyBblRBZp_9JKVUeK-HKRcW4_EY160-CmeU`
       }else {
-        url = 'http://www.clipartbest.com/cliparts/9cp/oq6/9cpoq6rRi.png';
+        url = 'http://i.imgur.com/VsD1hGj.png';
       }
       let price = this.props.result.price_level
       if (price == 3) {
