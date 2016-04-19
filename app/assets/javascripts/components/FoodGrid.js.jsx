@@ -19,8 +19,8 @@ class FoodGrid extends React.Component {
                       name="American" />
           <FoodButton handleClick={this.props.searchParams} 
                       searchValue={this.props.searchValue}
-                      checked={this.checked("Bar")} 
-                      name="Cocktails" />
+                      checked={this.checked("Thai")} 
+                      name="Thai" />
           <FoodButton handleClick={this.props.searchParams} 
                       searchValue={this.props.searchValue}
                       checked={this.checked("Chinese")} 
@@ -31,20 +31,20 @@ class FoodGrid extends React.Component {
                       name="French" />
           <FoodButton handleClick={this.props.searchParams} 
                       searchValue={this.props.searchValue}
-                      checked={this.checked("German")} 
-                      name="German" />
-          <FoodButton handleClick={this.props.searchParams} 
-                      searchValue={this.props.searchValue}
                       checked={this.checked("Italian")} 
                       name="Italian" />
           <FoodButton handleClick={this.props.searchParams} 
                       searchValue={this.props.searchValue}
-                      checked={this.checked("Japanese")} 
-                      name="Japanese" />
+                      checked={this.checked("German")} 
+                      name="German" />
           <FoodButton handleClick={this.props.searchParams} 
                       searchValue={this.props.searchValue}
                       checked={this.checked("Mexican")} 
                       name="Mexican" / >
+          <FoodButton handleClick={this.props.searchParams} 
+                      searchValue={this.props.searchValue}
+                      checked={this.checked("Japanese")} 
+                      name="Japanese" />
           <FoodButton handleClick={this.props.searchParams} 
                       searchValue={this.props.searchValue}
                       checked={this.checked("Seafood")} 
@@ -55,12 +55,12 @@ class FoodGrid extends React.Component {
                       name="Spanish" />
           <FoodButton handleClick={this.props.searchParams} 
                       searchValue={this.props.searchValue}
-                      checked={this.checked("Thai")} 
-                      name="Thai" />
-          <FoodButton handleClick={this.props.searchParams} 
-                      searchValue={this.props.searchValue}
                       checked={this.checked("Vietnamese")} 
                       name="Viet" />
+          <FoodButton handleClick={this.props.searchParams} 
+                      searchValue={this.props.searchValue}
+                      checked={this.checked("Bar")} 
+                      name="Cocktails" />
         </div>
         <br/>
         <br/>
