@@ -12,6 +12,7 @@ gem 'font-awesome-sass', '~> 4.5.0'
 gem 'delayed_job', '4.1.1'
 gem 'delayed_job_active_record', '4.1.0'
 gem 'omniauth-facebook', '3.0.0'
+gem 'social-share-button'
 
 gem 'jquery-rails', '4.1.1'
 gem 'jbuilder', '~> 2.0'
