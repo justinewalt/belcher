@@ -26,8 +26,8 @@ class ResultsPage extends React.Component {
           <img className="result_image" src={url} />
           <p>{this.props.result.vicinity}</p>
           <p>Would you like to eat here?</p>
-          <button onClick={this.props.newResult}>No</button>
-          <button onClick={this.props.clickYes}>Yes</button>
+          <button className="result-button" onClick={this.props.newResult}>No</button>
+          <button className="result-button" onClick={this.props.clickYes}>Yes</button>
         </div>
       );
     }else {
