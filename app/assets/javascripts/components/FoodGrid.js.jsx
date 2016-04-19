@@ -56,10 +56,10 @@ class FoodGrid extends React.Component {
           <FoodButton handleClick={this.props.searchParams} 
                       searchValue={this.props.searchValue}
                       checked={this.checked("Vietnamese")} 
-                      name="Viet" />
+                      name="Vietnamese" />
           <FoodButton handleClick={this.props.searchParams} 
                       searchValue={this.props.searchValue}
-                      checked={this.checked("Bar")} 
+                      checked={this.checked("Cocktails")} 
                       name="Cocktails" />
         </div>
         <br/>
