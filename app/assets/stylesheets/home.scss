@@ -42,3 +42,14 @@ a {
   width: 46%;
   background-color: #33C3F0;
 }
+
+button {
+  border: 1px solid black;
+  border-radius: 0;
+  background-color: #1c1c1c;
+}
+
+button:hover {
+  background-color: #1c1c1c;
+  border: 2px solid grey;
+}

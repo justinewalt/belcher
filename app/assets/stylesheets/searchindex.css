@@ -17,10 +17,6 @@
   cursor: pointer;
 }
 
-.find-food-button:hover {
-  background-color: #33C3F0;
-}
-
 .search-index-buttons h5{
   margin: 0;
   padding: 0;
@@ -32,10 +28,6 @@
   font-size: 1.1em;
   background-color: black;
   height: 50px;
-}
-
-.search-index-buttons button:hover {
-  background-color: #33C3F0;
 }
 
 .search-index-input {
