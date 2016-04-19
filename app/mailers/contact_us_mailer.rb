@@ -3,5 +3,7 @@ class ContactUsMailer < ApplicationMailer
 
  def new_contact(body)
    mail(to: ENV['MAIL_FROM'], subject: 'Message from Belcher', body: body)
+   flash[:notice] = "Message Sent! Thank for for your feedback."
+   redirect_to root_path
  end
 end
