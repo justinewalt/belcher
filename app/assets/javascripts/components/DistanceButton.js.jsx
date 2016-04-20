@@ -1,25 +1,19 @@
 class DistanceButton extends React.Component {
   constructor(props) {
     super(props);
-    // this.toggleButton = this.toggleButton.bind(this);
     this.state = { style: {} };
+    this.toggleButtons = this.toggleButtons.bind(this);
   }
 
-  toggleButton(){
-    let select = !this.state.checked; 
-    let style = {};
-    if (select) {
-      style = { 
-        color: '#c99c14'
-      }
-    }
+  toggleButtons(){
     this.props.handleClick(this.props.name)
-    this.setState({ checked: select, style: style });
   }
 
   render() {
     return (
-      <button onClick={this.props.toggleButton} style={this.state.style}>{this.props.id}</button>
+      <button className={this.props.active ? 'active':''}
+       onClick={() => this.props.handleClick(this.props.id, this.props.dist)} 
+       style={this.state.style}>{this.props.id}</button>
     )
   }
 }

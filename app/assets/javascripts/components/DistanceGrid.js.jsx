@@ -2,21 +2,21 @@ class DistanceGrid extends React.Component {
   constructor(props) {
     super(props);
     this.toggleButtons = this.toggleButtons.bind(this);
-    this.state = { checked: [false, false, false], style: {} };
+    this.state = { checked: [false, true, false], style: {} };
+
   } 
 
-  toggleButtons(){
-    console.log('gaor')
-    if (this.props.setDistance == 600) {
+  toggleButtons( id, distance ){
+    if (id === "Walking") {
       this.setState({ checked: [true, false, false] })
-    }else if (this.props.setDistance == 8046) {
-      console.log('8064');
+    }else if (id === "5 Miles") {
       this.setState({ checked: [false, true, false] })
-    }else if (this.props.setDistance == 32186) {
+    }else if (id === "20 Miles" ) {
       this.setState({ checked: [false, false, true] }) 
     }else {
       this.setState({ checked: [false, false, false] })
     }
+    this.props.setDistance(distance)
   }
 
   render () {
@@ -24,9 +24,9 @@ class DistanceGrid extends React.Component {
       <div className="search-index-div">
         <div className="twelve columns text-center">
           <div className="search-index-buttons twelve columns">
-            <DistanceButton toggleButton={this.toggleButtons} onClick={() => this.toggleButtons} name="distance" id="Walking" {...DistanceButton} />
-            <DistanceButton toggleButton={this.toggleButtons} onClick={() => this.toggleButtons} name="distance" id="5 Miles" {...DistanceButton} />
-            <DistanceButton toggleButton={this.toggleButtons} onClick={() => this.toggleButtons} name="distance" id ="20 Miles" {...DistanceButton} />
+            <DistanceButton active={this.state.checked[0]} handleClick={this.toggleButtons} name="distance" id="Walking" dist={600} />
+            <DistanceButton active={this.state.checked[1]} handleClick={this.toggleButtons} name="distance" id="5 Miles" dist={8046} />
+            <DistanceButton active={this.state.checked[2]} handleClick={this.toggleButtons} name="distance" id ="20 Miles" dist={32186} />
           </div>
         </div>
       </div>
