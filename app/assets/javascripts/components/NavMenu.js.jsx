@@ -29,10 +29,7 @@ class NavMenu extends React.Component {
       <nav>
         <p className="hamburger-text">
           <i className="fa fa-user nav-icon"></i>
-          <a> Profile</a></p>
-        <p className="hamburger-text">
-          <i className="fa fa-filter nav-icon"></i>
-          <a> Preferences</a></p> 
+          <a href="/profile"> Profile</a></p>
         <p className="hamburger-text">
           <i className="fa fa-sign-out nav-icon"></i>
           <a data-method="delete" href={this.props.links.logOut}> Logout</a></p>

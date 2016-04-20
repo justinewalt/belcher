@@ -6,9 +6,9 @@ class Profile extends React.Component {
   render() {
     return(
       <div className="profile-div twelve columns">
-        <h3 className="text-center">Profile</h3>
+        <h3 className="text-center profile-title">Profile</h3>
         <div>
-          <button className="preferences-button button-primary four columns offset-by-four">Preferences</button>
+          <button className="preferences-button four columns offset-by-four">Preferences</button>
         </div>
       </div>
     );
