@@ -24,8 +24,7 @@ class Contact extends React.Component {
   render() {
     return (
       <div className="twelve columns top-margin text-center">
-        <h3>Contact</h3>
-        <p>Happy? Sad? Indifferent?</p>
+        <h3 className="contact-title">Contact</h3>
         <p>Send us a message.</p>
         <div className="offset-by-three six columns">
          <form className="contact-form" onSubmit={this.sendMail} >

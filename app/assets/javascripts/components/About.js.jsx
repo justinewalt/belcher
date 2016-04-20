@@ -21,7 +21,7 @@ class About extends React.Component {
             <p>Enjoy!</p>
           </div>
         <div className="container top-margin text-center">
-          <h3>Creators</h3>
+          <h3 className="the-team">The Team</h3>
           <div className="about-info three columns">
             <h4 className="about-first">Justin</h4>
             <h6 className="about-last">Ewalt</h6>
