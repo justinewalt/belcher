@@ -12,10 +12,10 @@ class FoodButton extends React.Component {
     let style; 
     if (this.props.checked) {
       style = {
-        backgroundColor: '#33C3F0'      }
+        color: '#c99c14'      }
     }else{
       style = {
-        backgroundColor: '#1c1c1c'
+        // backgroundColor: '#1c1c1c'
       }
     }
     return (

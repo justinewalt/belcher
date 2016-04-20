@@ -10,8 +10,7 @@ class DistanceButton extends React.Component {
     let style = {};
     if (select) {
       style = { 
-        backgroundColor: '#33C3F0',
-        color: 'white'
+        color: '#c99c14'
       }
     }
     this.props.handleClick(this.props.name)
