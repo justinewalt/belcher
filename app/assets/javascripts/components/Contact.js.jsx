@@ -34,7 +34,7 @@ class Contact extends React.Component {
           <br />
           <textarea ref="message" className="message-input" placeholder="Message (required)" required={true}></textarea>
           <br />
-          <input type="submit" className="button-primary" />
+          <button className="contact-button">Send</button>
          </form>
         </div>
       </div>
