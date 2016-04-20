@@ -42,9 +42,14 @@ class SearchIndex extends React.Component {
 
 //============== what happens when you click no ===============
   newResult() {
+    let count = this.state.results.length
     let index = this.state.results.findIndex( v => v === this.state.result )
+    if (count === 1) {
+      window.location.assign('/')
+    } else {
     this.state.results.splice(index, 1)
     this.setState({result: this.state.results[Math.floor(Math.random()*this.state.results.length)]})
+    }
   }
 
 //======================== GET SPOTS (AJAX CALL)===========================
