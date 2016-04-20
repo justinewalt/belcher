@@ -1,8 +1,8 @@
 class DistanceButton extends React.Component {
   constructor(props) {
     super(props);
-    this.toggleButton = this.toggleButton.bind(this);
-    this.state = { checked: false, style: {} };
+    // this.toggleButton = this.toggleButton.bind(this);
+    this.state = { style: {} };
   }
 
   toggleButton(){
@@ -19,7 +19,7 @@ class DistanceButton extends React.Component {
 
   render() {
     return (
-      <button onClick={this.toggleButton} style={this.state.style}>{this.props.id}</button>
+      <button onClick={this.props.toggleButton} style={this.state.style}>{this.props.id}</button>
     )
   }
 }
