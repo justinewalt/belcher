@@ -18,6 +18,10 @@
   cursor: pointer;
 }
 
+.find-food-button-disabled {
+  background-color: black;
+}
+
 .search-index-buttons h5{
   margin: 0;
   padding: 0;

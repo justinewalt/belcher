@@ -45,7 +45,7 @@ class SearchIndex extends React.Component {
     let count = this.state.results.length
     let index = this.state.results.findIndex( v => v === this.state.result )
     if (count === 1) {
-      window.location.assign('/')
+      window.location.assign('/foodout')
     } else {
     this.state.results.splice(index, 1)
     this.setState({result: this.state.results[Math.floor(Math.random()*this.state.results.length)]})
@@ -121,11 +121,19 @@ class SearchIndex extends React.Component {
 
   foodButtons() {
     if(this.state.searched === false) {
+      let findFood;
+      if(this.state.lat){
+        findFood = <div onClick={this.getSpots} className="find-food-button offset-by-four four columns">
+                     <p>Find Me Food</p>
+                   </div>
+      }else {
+        findFood = <div className="find-food-button find-food-button-disabled offset-by-four four columns">
+                     <p>Loading Location....</p>
+                   </div>
+      }
       return(
         <div className="container">
-          <div onClick={this.getSpots} className="find-food-button offset-by-four four columns">
-            <p>Find Me Food</p>
-          </div>
+        {findFood}
           <div className="twelve columns">
             <button className="popular-cuisines" type='button' onClick={() => this.setState({toggleSearch: !this.state.toggleSearch})}>Popular Cuisines</button>
             <br />

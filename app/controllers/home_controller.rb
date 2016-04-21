@@ -28,6 +28,11 @@ class HomeController < ApplicationController
     render json: @results
   end
 
+  def foodout
+    flash[:notice] = "Oh, no! Out of choice, search again ;)"
+    redirect_to root_path
+  end
+
   private
 
     def client
