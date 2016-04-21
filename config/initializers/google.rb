@@ -7,4 +7,3 @@ if Rails.env.development? || Rails.env.test?
     raise "Missing file google.yml"
   end
 end
-

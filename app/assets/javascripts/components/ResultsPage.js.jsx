@@ -10,6 +10,7 @@ class ResultsPage extends React.Component {
       }else {
         url = 'http://i.imgur.com/VsD1hGj.png';
       }
+
       let price = this.props.result.price_level
       if (price == 3) {
         price = 'Price: $$$'
@@ -17,17 +18,20 @@ class ResultsPage extends React.Component {
         price = 'Price: $$'
       }else if (price == 1) {
         price = 'Price: $'
+      }else {
+        price = 'No Price Available'
       };
 
       return(
         <div className="text-center">
           <h1>{this.props.result.name}</h1>
-
           <img className="result_image" src={url} />
-          <p>{this.props.result.vicinity}</p>
-          <p>Would you like to eat here?</p>
-          <button className="result-button" onClick={this.props.newResult}>No</button>
-          <button className="result-button" onClick={this.props.clickYes}>Yes</button>
+          <p className="map-div-text">{this.props.result.vicinity}</p>
+          <p className="map-div-text">{price} - Rating: {this.props.result.rating} </p>
+          <br />
+          <p className="map-div-text">Would you like to eat here?</p>
+          <p className="fa fa-times-circle no-class" onClick={this.props.newResult}></p>
+          <p className="fa fa-check-circle" onClick={this.props.clickYes}></p>
         </div>
       );
     }else {

@@ -174,7 +174,7 @@ class SearchIndex extends React.Component {
       <div className="search-index-div">
         <div className="twelve columns text-center">
           <ResultsPage results={this.state.results} result={this.state.result} newResult={this.newResult} clickYes={this.clickYes}/>
-          <Yes result={this.state.result} yes={this.state.yes} />
+          <Yes result={this.state.result} yes={this.state.yes} lat={this.state.lat} lng={this.state.lng} />
           {this.foodButtons()}
         </div>
       </div>
