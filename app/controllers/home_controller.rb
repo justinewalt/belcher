@@ -31,7 +31,7 @@ class HomeController < ApplicationController
   end
 
   def foodout
-    flash[:notice] = "Oh, no! Out of choice, search again ;)"
+    flash[:notice] = "Oh, no! Out of choices, search again ;)"
     redirect_to root_path
   end
 
