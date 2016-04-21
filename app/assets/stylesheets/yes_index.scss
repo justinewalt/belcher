@@ -2,11 +2,11 @@
   font-size: 70px;
   color: white;
   padding: 10px;
-  text-align: right;
+  text-align: left;
   padding-bottom: 0;
   margin-bottom: 3px;
 }
-
+†
 .map-div-text {
   color: white;
   font-size: 20px;
@@ -14,11 +14,15 @@
   padding: 0;
 }
 
-.map-div-text2 {
-  color: white;
-  font-size: 20px;
-  margin: 0;
-  padding: 0;
+.fa-check-circle {
+  font-size: 70px;
+  color: green;
+  margin: .5em;
+}
+
+.fa-check-circle:hover {
+  color: #3fa83d;
+  cursor: pointer;
 }
 
 .direction-text {
@@ -28,10 +32,18 @@
   padding: 0;
 }
 
-.left-div {
-  padding-left: 0;
+.no-class {
+  font-size: 70px;
+  color: red;
+  margin: .5em;
+}
+.no-class:hover {
+  color: #f15959;
+  cursor: pointer;
 }
 
-.right-div {
-  margin-left: 0;
+.map-div-text {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
 }
