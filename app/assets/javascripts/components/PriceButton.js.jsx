@@ -17,3 +17,6 @@ class PriceButton extends React.Component {
     )
   }
 }
+
+// lsof -i :8080 (or whatever port is running in the background that can't be stopped)
+// kill (PID #)
