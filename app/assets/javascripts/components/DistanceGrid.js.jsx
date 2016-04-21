@@ -3,7 +3,6 @@ class DistanceGrid extends React.Component {
     super(props);
     this.toggleButtons = this.toggleButtons.bind(this);
     this.state = { checked: [false, true, false], style: {} };
-
   } 
 
   toggleButtons( id, distance ){

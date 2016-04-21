@@ -12,7 +12,7 @@ class DistanceButton extends React.Component {
   render() {
     return (
       <button className={this.props.active ? 'active':''}
-       onClick={() => this.props.handleClick(this.props.id, this.props.dist)} 
+       onClick={() => this.props.handleClick(this.props.id, this.props.dist)}
        style={this.state.style}>{this.props.id}</button>
     )
   }

@@ -5,7 +5,7 @@ class PriceGrid extends React.Component {
     this.state = { checked: [false, false, true], style: {} };
   }
 
-  toggleButtons( id ){
+  toggleButtons( id, price ){
     if (id === "$") {
       this.setState({ checked: [true, false, false] })
     }else if (id === "$$") {
@@ -15,6 +15,7 @@ class PriceGrid extends React.Component {
     }else {
       this.setState({ checked: [false, false, false] })
     }
+    this.props.setPrice(price)
   }
 
   render () {
@@ -22,9 +23,9 @@ class PriceGrid extends React.Component {
       <div className="search-index-div">
         <div className="twelve columns text-center">
           <div className="search-index-buttons twelve columns">
-            <PriceButton active={this.state.checked[0]} toggleButton={this.toggleButtons} handleClick={() => this.props.setPrice(1)} name="price" id="$"/>
-            <PriceButton active={this.state.checked[1]} toggleButton={this.toggleButtons} handleClick={() => this.props.setPrice(2)} name="price" id="$$"/>
-            <PriceButton active={this.state.checked[2]} toggleButton={this.toggleButtons} handleClick={() => this.props.setPrice(3)} name="price" id="$$$"/>
+            <PriceButton active={this.state.checked[0]} handleClick={this.toggleButtons} name="price" id="$" setPri="1" />
+            <PriceButton active={this.state.checked[1]} handleClick={this.toggleButtons} name="price" id="$$" setPri="2"/>
+            <PriceButton active={this.state.checked[2]} handleClick={this.toggleButtons} name="price" id="$$$" setPri="3"/>
           </div>
         </div>
       </div>
