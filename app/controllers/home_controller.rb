@@ -12,7 +12,6 @@ class HomeController < ApplicationController
     else
       search_params = ""
     end
-    @origin = Geocoder.search("#{lat}, #{long}").first.formatted_address
     @lat = params["lat"].to_f
     @long = params["lng"].to_f
     search_params = params["search"].join("| ")
