@@ -13,10 +13,9 @@ Rails.application.routes.draw do
   get '/profile', to: 'profile#show'
   get '/contact', to: 'contact_us#index'
   get '/autocomplete', to: 'home#autocomplete'
-<<<<<<< HEAD
   get '/foodout', to: 'home#foodout'
-=======
+
   get '/uber_products', to: 'home#uber_products'
   get '/uber_call', to: 'home#uber_call'
->>>>>>> 973f68c49b8d622046a935db3d376e0600f5b121
+
 end
