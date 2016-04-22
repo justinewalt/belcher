@@ -1,30 +1,21 @@
 <!-- <%= react_component 'Profile' %> -->
 
 <div class="profile-div twelve columns">
-  <h3 class="text-center profile-title"><%= current_user.username %></h3>
-  <div>
-    <br />
-    <br />
-  </div>
-  <div class="container three columns offset-by-one">
-    <h2 class="text-center" style="border: 1px solid white">Recents</h2>
+  <h3 class="profile-name"><%= current_user.username %>'s profile</h3>
+  <div class="five columns offset-by-one">
+    <h3 class="text-center profile-title">Recents</h3>
     <% @recents.each do |recent| %>
-    <% if recent.user_id == current_user.id %>
-    <h3><a href="http://maps.google.com/?q=<%= recent.name %>+<%= recent.address %>" target="_blank"><%= recent.name %></a></h3>
-    <p><%= recent.address %></p>
-    <p>Rating: <%= recent.rating %></p>
-    <% end %>
+      <% if recent.user_id == current_user.id %>
+        <a href="http://maps.google.com/?q=<%= recent.name %>+<%= recent.address %>" target="_blank"><h5 class="recent-name"><%= recent.name %></h5></a>
+        <p class="recent-info"><%= recent.address %></p>
+        <p class="recent-info">Rating: <%= recent.rating %></p>
+      <% end %>
+      <hr />
     <% end %>
   </div>
-  <div class="container three offset-by-one columns text-center">
-    <h2 style="border: 1px solid white">Dislikes</h2>
-    <p>
-      coming soon
-    </p>
-  </div>
-  <div class="container three columns offset-by-one text-center">
-    <h2 style="border: 1px solid white">Preferences</h2>
-    <p>
+  <div class="five columns offset-by-one">
+    <h3 class="text-center profile-title">Dislikes</h3>
+    <p class="text-center">
       coming soon
     </p>
   </div>
