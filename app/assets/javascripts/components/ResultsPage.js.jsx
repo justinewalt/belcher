@@ -21,7 +21,7 @@ class ResultsPage extends React.Component {
   render() {
     if(this.props.results.length != 0) {
       if (this.props.result.photos[0] !== undefined ) {
-        url = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${this.props.result.photos[0].photo_reference}&key=AIzaSyDVDXQiV41ClCc_ZsVKV-YvksIDyihw5qY`
+        url = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${this.props.result.photos[0].photo_reference}&key=AIzaSyDjH86rcfIoaXzluTnahrfvvnLxU0920vU`
       }else {
         url = 'https://i.imgur.com/VsD1hGj.png';
       }

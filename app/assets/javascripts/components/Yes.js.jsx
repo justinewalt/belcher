@@ -16,7 +16,7 @@ class Yes extends React.Component {
       }else {
         price = ""
       };
-      let url = `https://maps.googleapis.com/maps/api/staticmap?center=${this.props.result.lat},${this.props.result.lng}&zoom=17&size=250x250&markers=color:red|${this.props.result.lat},${this.props.result.lng}&maptype=roadmap&key=AIzaSyDVDXQiV41ClCc_ZsVKV-YvksIDyihw5qY`
+      let url = `https://maps.googleapis.com/maps/api/staticmap?center=${this.props.result.lat},${this.props.result.lng}&zoom=17&size=250x250&markers=color:red|${this.props.result.lat},${this.props.result.lng}&maptype=roadmap&key=AIzaSyDjH86rcfIoaXzluTnahrfvvnLxU0920vU`
       let href = `http://maps.google.com/?q=${this.props.result.name}+${this.props.result.vicinity}`
       return(
         <div className="text-center">
