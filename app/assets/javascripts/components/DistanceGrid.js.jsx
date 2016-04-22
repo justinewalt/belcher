@@ -23,7 +23,7 @@ class DistanceGrid extends React.Component {
       <div className="search-index-div">
         <div className="twelve columns text-center">
           <div className="search-index-buttons twelve columns">
-            <DistanceButton active={this.state.checked[0]} handleClick={this.toggleButtons} name="distance" id="Walking" dist={600} />
+            <DistanceButton active={this.state.checked[0]} handleClick={this.toggleButtons} name="distance" id="Walking" dist={900} />
             <DistanceButton active={this.state.checked[1]} handleClick={this.toggleButtons} name="distance" id="5 Miles" dist={8046} />
             <DistanceButton active={this.state.checked[2]} handleClick={this.toggleButtons} name="distance" id ="20 Miles" dist={32186} />
           </div>
