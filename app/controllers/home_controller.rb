@@ -52,6 +52,10 @@ class HomeController < ApplicationController
     end
     render json: {}
   end
+
+  def loader
+    render text: 'loaderio-355452d93107d872484e0af1ad679c62'
+  end
   # def uber_call
   #   lat = params["lat"]
   #   long = params["lng"]

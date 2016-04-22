@@ -17,10 +17,9 @@ Rails.application.routes.draw do
   get '/autocomplete', to: 'home#autocomplete'
   get '/foodout', to: 'home#foodout'
   get '/noresults', to: 'home#noresults'
-
+  get '/loaderio-355452d93107d872484e0af1ad679c62', to: 'home#loader'
   get '/uber_products', to: 'home#uber_products'
   get '/uber_call', to: 'home#uber_call'
 
   put '/recents', to: 'home#recents'
-
 end
