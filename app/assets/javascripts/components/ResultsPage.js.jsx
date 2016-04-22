@@ -23,7 +23,7 @@ class ResultsPage extends React.Component {
       if (this.props.result.photos[0] !== undefined ) {
         url = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${this.props.result.photos[0].photo_reference}&key=AIzaSyBblRBZp_9JKVUeK-HKRcW4_EY160-CmeU`
       }else {
-        url = 'http://i.imgur.com/VsD1hGj.png';
+        url = 'https://i.imgur.com/VsD1hGj.png';
       }
 
       let price = this.props.result.price_level

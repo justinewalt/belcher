@@ -29,7 +29,7 @@ class Navigation extends React.Component {
       <div>
         <div className="nav-bar">
           <Hamburger toggleMenuOpen={this.toggleMenuOpen} />
-          <a href={this.props.links.belcher}><img className="icon" src='http://i.imgur.com/VsD1hGj.png' /></a>
+          <a href={this.props.links.belcher}><img className="icon" src='https://i.imgur.com/VsD1hGj.png' /></a>
           <h2 className="logo"><a href={this.props.links.belcher}>Belcher</a></h2>
           {links}
         </div>
