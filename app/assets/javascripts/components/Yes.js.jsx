@@ -19,9 +19,9 @@ class Yes extends React.Component {
       let href = `http://maps.google.com/?q=${this.props.result.name}+${this.props.result.vicinity}`
       return(
         <div className="text-center">
-          <h1>{this.props.result.name}</h1>
-          <p className="map-div-text">{price} - Rating: {this.props.result.rating} </p>
-          <p className="map-div-text">- {this.props.result.vicinity} -</p>
+          <h1 className="result-name">{this.props.result.name}</h1>
+          <p className="price-rating">{price}<span className="price-rating-span"> </span>Rating: {this.props.result.rating} </p>
+          <p className="map-div-text">{this.props.result.vicinity}</p>
           <img src={url} className="map_frame"></img>
           <div>
             <div>
