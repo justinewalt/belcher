@@ -146,7 +146,7 @@ class SearchIndex extends React.Component {
           </div>
           <PriceGrid setPrice={this.setPrice}/>
           <DistanceGrid setDistance={this.setDistance}/>
-          <input className="search-index-input" type="text" placeholder="Food Type or Restaurant Name (Optional)" ref={"searchBar"} /> 
+          <input className="search-index-input" type="text" placeholder="Food Type or Restaurant Name (Optional)" ref={"searchBar"} />
         </div>
       );
     }

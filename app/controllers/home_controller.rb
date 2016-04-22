@@ -39,6 +39,19 @@ class HomeController < ApplicationController
     flash[:notice] = "No results in your search area, try again."
     redirect_to root_path
   end
+
+  def recents
+    name = params['name']
+    address = params['address']
+    rating = params['rating']
+    price = params['price']
+    picture = params['picture']
+
+    if user_signed_in?
+      recent = Recent.create({name: name, address: address, rating: rating, price: price , picture: picture, user_id: current_user.id})
+    end
+    render json: {}
+  end
   # def uber_call
   #   lat = params["lat"]
   #   long = params["lng"]

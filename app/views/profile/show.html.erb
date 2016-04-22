@@ -1,8 +1,31 @@
 <!-- <%= react_component 'Profile' %> -->
 
 <div class="profile-div twelve columns">
-  <h3 class="text-center profile-title">Profile</h3>
+  <h3 class="text-center profile-title"><%= current_user.username %></h3>
   <div>
-    <button class="preferences-button four columns offset-by-four">Coming Soon</button>
+    <br />
+    <br />
+  </div>
+  <div class="container three columns offset-by-one">
+    <h2 class="text-center" style="border: 1px solid white">Recents</h2>
+    <% @recents.each do |recent| %>
+    <% if recent.user_id == current_user.id %>
+    <h3><a href="http://maps.google.com/?q=<%= recent.name %>+<%= recent.address %>" target="_blank"><%= recent.name %></a></h3>
+    <p><%= recent.address %></p>
+    <p>Rating: <%= recent.rating %></p>
+    <% end %>
+    <% end %>
+  </div>
+  <div class="container three offset-by-one columns text-center">
+    <h2 style="border: 1px solid white">Dislikes</h2>
+    <p>
+      coming soon
+    </p>
+  </div>
+  <div class="container three columns offset-by-one text-center">
+    <h2 style="border: 1px solid white">Preferences</h2>
+    <p>
+      coming soon
+    </p>
   </div>
 </div>

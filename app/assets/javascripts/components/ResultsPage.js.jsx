@@ -1,6 +1,21 @@
 class ResultsPage extends React.Component {
   constructor(props) {
     super(props);
+    this.recentsPush = this.recentsPush.bind(this);
+  }
+
+  recentsPush(price, url) {
+    $.ajax({
+      url: '/recents',
+      type: 'PUT',
+      data: {name: this.props.result.name, address: this.props.result.vicinity,
+            rating: this.props.result.rating, price: price, picture: url }
+    }).done(data => {
+      console.log(data)
+    }).fail(data => {
+      console.log(data)
+    });
+    this.props.clickYes();
   }
 
   render() {
@@ -31,7 +46,7 @@ class ResultsPage extends React.Component {
           <br />
           <p className="eat-here">Eat here?</p>
           <p className="fa fa-times-circle result-button" onClick={this.props.newResult}></p>
-          <p className="fa fa-check-circle result-button" onClick={this.props.clickYes}></p>
+          <p className="fa fa-check-circle" onClick={() => this.recentsPush(price, url)}></p>
         </div>
       );
     }else {
