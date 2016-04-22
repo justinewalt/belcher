@@ -1,6 +1,6 @@
 class ProfileController < ApplicationController
   def show
-    @recents = Recent.all
+    @recents = current_user.recents
   end
 
   private

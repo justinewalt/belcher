@@ -4,13 +4,19 @@
   <h3 class="profile-name"><%= current_user.username %>'s profile</h3>
   <div class="five columns offset-by-one">
     <h3 class="text-center profile-title">Recents</h3>
-    <% @recents.each do |recent| %>
-      <% if recent.user_id == current_user.id %>
-        <a href="http://maps.google.com/?q=<%= recent.name %>+<%= recent.address %>" target="_blank"><h5 class="recent-name"><%= recent.name %></h5></a>
-        <p class="recent-info"><%= recent.address %></p>
-        <p class="recent-info">Rating: <%= recent.rating %></p>
+    <% if @recents.any? %>
+      <% @recents.each do |recent| %>
+        <% if recent.user_id == current_user.id %>
+          <a href="http://maps.google.com/?q=<%= recent.name %>+<%= recent.address %>" target="_blank"><h5 class="recent-name"><%= recent.name %></h5></a>
+          <p class="recent-info"><%= recent.address %></p>
+          <p class="recent-info">Rating: <%= recent.rating %></p>
+          <hr />
+        <% end %>
       <% end %>
-      <hr />
+    <% else %>
+      <p class="text-center">
+        No Recents
+      </p>
     <% end %>
   </div>
   <div class="five columns offset-by-one">
