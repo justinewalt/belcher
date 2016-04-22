@@ -37,7 +37,7 @@ class ResultsPage extends React.Component {
     }else {
       return(
         <div></div>
-      );
+      )
     }
   }
 
