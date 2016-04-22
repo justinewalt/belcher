@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'recents/index'
+
   root 'home#index'
 
   devise_for :users, controllers: {
@@ -18,5 +20,7 @@ Rails.application.routes.draw do
 
   get '/uber_products', to: 'home#uber_products'
   get '/uber_call', to: 'home#uber_call'
+
+  put '/recents', to: 'home#recents'
 
 end
