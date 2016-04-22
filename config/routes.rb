@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get '/contact', to: 'contact_us#index'
   get '/autocomplete', to: 'home#autocomplete'
   get '/foodout', to: 'home#foodout'
+  get '/noresults', to: 'home#noresults'
 
   get '/uber_products', to: 'home#uber_products'
   get '/uber_call', to: 'home#uber_call'

@@ -31,10 +31,14 @@ class HomeController < ApplicationController
   end
 
   def foodout
-    flash[:notice] = "Oh, no! Out of choices, search again ;)"
+    flash[:notice] = "Oh, no! Out of choices, search again."
     redirect_to root_path
   end
 
+  def noresults
+    flash[:notice] = "No results in your search area, try again."
+    redirect_to root_path
+  end
   # def uber_call
   #   lat = params["lat"]
   #   long = params["lng"]

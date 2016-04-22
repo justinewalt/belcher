@@ -71,9 +71,13 @@ class SearchIndex extends React.Component {
             lat: this.state.lat,
             lng: this.state.lng}
     }).done(data => {
+      if (data.filtered_spots.length == 0) {
+        window.location.assign('/noresults')
+      } else {
       this.setState({results: data.filtered_spots, search: "",
                     result: data.filtered_spots[Math.floor(Math.random()*data.filtered_spots.length)],
                     origin: data.origin, distance_to: data.distance_to, time_to: data.time_to, searched: true})
+      }
     }).fail(data => {
       console.log("Search Error")
     });
