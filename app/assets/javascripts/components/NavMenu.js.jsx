@@ -10,12 +10,12 @@ class NavMenu extends React.Component {
     if (this.props.isOpen) {
       return(<div className="hamburger-menu">
                 <div className="hamburger-content">
-                  <p className="hamburger-text">
+                  <a href='/about'><p className="hamburger-text">
                     <i className="fa fa-info-circle nav-icon"></i>
-                    <a href='/about'> About</a></p>
-                  <p className="hamburger-text">
-                  <i className="fa fa-envelope nav-icon"></i>
-                  <a href='/contact'>Contact</a></p>
+                    About</p></a>
+                  <a href='/contact'><p className="hamburger-text">
+                    <i className="fa fa-envelope nav-icon"></i>
+                    Contact</p></a>
                 {this.sideNavLogin() }
                 </div>
              </div>
@@ -27,23 +27,23 @@ class NavMenu extends React.Component {
     if (this.props.userLogIn) {
      return(
       <nav>
-        <p className="hamburger-text">
+        <a href="/profile"><p className="hamburger-text">
           <i className="fa fa-user nav-icon"></i>
-          <a href="/profile"> Profile</a></p>
-        <p className="hamburger-text">
+          Profile</p></a>
+        <a data-method="delete" href={this.props.links.logOut}><p className="hamburger-text">
           <i className="fa fa-sign-out nav-icon"></i>
-          <a data-method="delete" href={this.props.links.logOut}> Logout</a></p>
+          Logout</p></a>
       </nav>
       )
     } else {
       return(
         <nav>
-          <p className="hamburger-text">
+          <a href={this.props.links.logIn}><p className="hamburger-text">
             <i className="fa fa-sign-in nav-icon"></i>
-            <a href={this.props.links.logIn}> Log In</a></p>
-          <p className="hamburger-text">
+            Log In</p></a>
+          <a href={this.props.links.signUp}><p className="hamburger-text">
             <i className="fa fa-user-plus nav-icon"></i>
-            <a href={this.props.links.signUp}>Sign Up</a></p>
+            Sign Up</p></a>
         </nav>
       )
     }
