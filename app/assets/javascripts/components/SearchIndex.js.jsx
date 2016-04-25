@@ -24,7 +24,7 @@ class SearchIndex extends React.Component {
 //========================== SEARCH PARAMS ===============================
   searchParams(search, checked) {
     let searchValue = this.state.searchValue;
-    if (searchValue[0] == "restaurant, fast food"){
+    if (searchValue[0] == "restaurant"){
       searchValue = []
     }
     if (checked) {
@@ -55,11 +55,10 @@ class SearchIndex extends React.Component {
 //======================== GET SPOTS (AJAX CALL)===========================
   getSpots(e) {
     e.preventDefault();
-    if (this.refs.searchBar.value != "") {
+    if (this.refs.searchBar.value === "") {
+      this.state.searchValue.push("restaurant")
+    } else {
       this.state.searchValue.push (`${this.refs.searchBar.value}|`);
-    }
-    if (this.state.searchValue.length === 0) {
-      this.state.searchValue.push ("restaurant, fast food")
     }
     this.state.yes = false
     $.ajax({
