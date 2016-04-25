@@ -22,6 +22,12 @@
   background-color: black;
 }
 
+.search-index-buttons button {
+  width: 33%;
+  font-size: 1em;
+  height: 50px;
+}
+
 .search-index-buttons h5{
   margin: 0;
   padding: 0;

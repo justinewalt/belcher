@@ -22,10 +22,6 @@ a {
   padding: 0;
 }
 
-.black {
-  background-color: black;
-}
-
 .subject-input {
   width: 100%;
   margin-bottom: 4px;
@@ -55,16 +51,4 @@ button {
 button:hover {
   background-color: #1c1c1c;
   border: 2px solid grey;
-}
-
-
-.search-index-buttons button {
-  width: 33%;
-  font-size: 1em;
-  height: 50px;
-}
-
-.result-button {
-  width: 60px;
-  margin: 3px;
 }

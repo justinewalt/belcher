@@ -25,12 +25,17 @@ class Yes extends React.Component {
           <p className="price-rating">{price}<span className="price-rating-span"> </span>Rating: {this.props.result.rating} </p>
           <p className="map-div-text">{this.props.result.vicinity}</p>
           <img src={url} className="map_frame"></img>
-          <a href={href} target="_blank">
-            <div>
-              <i className="fa fa-chevron-circle-right"></i>
-              <p className="direction-text">Get Directions</p>
-            </div>
-          </a>
+          <br />
+          <div className="row">
+            <a className="result-a" href="/">  
+              <i className="fa fa-chevron-circle-left result-buttons"></i>
+              <p className="direction-text">Home</p>
+            </a>
+            <a className="result-a" href={href} target="_blank">
+              <i className="fa fa-chevron-circle-right result-buttons"></i>
+              <p className="direction-text">Directions</p>
+            </a>
+          </div>
         </div>
       );
     }else {
