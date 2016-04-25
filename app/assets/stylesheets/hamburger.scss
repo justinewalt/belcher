@@ -2,7 +2,8 @@
   background-color: black ;
   position: absolute;
   width: 260px;
-  height: 100vh;
+  height: calc(100% - 4em);
+  margin-bottom: -40px;
   z-index: 3;
 }
 
