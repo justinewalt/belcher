@@ -2,11 +2,22 @@
   .nav-link {
     display: none;
   }
+  .search-index-buttons button {
+    width: 33%;
+    font-size: 1em;
+    height: 50px;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 400px){
   .nav-link {
     display: none;
+  }
+
+  .search-index-buttons button {
+    width: 33%;
+    font-size: 1.2em;
+    height: 50px;
   }
 
   .map_frame {
@@ -43,6 +54,13 @@
 }
 
 @media (min-width: 701px) and (max-width: 999px) {
+
+  .search-index-buttons button {
+    width: 33%;
+    font-size: 1.5em;
+    height: 50px;
+  }
+
   .ham-icon {
     visibility: visible;
   }
@@ -64,6 +82,13 @@
 }
 
 @media (min-width: 1000px){
+
+  .search-index-buttons button {
+    width: 33%;
+    font-size: 1.5em;
+    height: 50px;
+  }
+
   .ham-icon {
     visibility: visible;
   }

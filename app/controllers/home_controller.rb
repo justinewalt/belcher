@@ -18,7 +18,7 @@ class HomeController < ApplicationController
     @origin = Geocoder.search("#{@lat}, #{@long}").first.formatted_address
 
     spots = @client.spots( @lat, @long, :radius =>  distance, :name => search_params,
-                          :types => ['restaurant', 'meal_takeaway', 'meal_delivery', 'cafe', 'bakery', 'bar'],
+                          :types => ['restaurant', 'cafe', 'bakery', 'bar'],
                           :exclude => ['grocery_or_supermarket'] )
     spots = spots.reject { |spot| spot.price_level.to_i > price}
     filtered_spots = spots.reject { |spot| spot.opening_hours == false || spot.opening_hours == nil}
@@ -26,12 +26,12 @@ class HomeController < ApplicationController
   end
 
   def foodout
-    flash[:notice] = "Oh, no! Out of choices, search again."
+    flash[:notice] = "Out of choices, search again."
     redirect_to root_path
   end
 
   def noresults
-    flash[:notice] = "No results in your search area, try again."
+    flash[:notice] = "No results near you, try again."
     redirect_to root_path
   end
 
