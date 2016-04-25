@@ -1,4 +1,4 @@
-if Rails.env.development?
+if Rails.env.development? || Rails.env.test?
   uber = "#{Rails.root}/config/uber.yml"
   if File.exists? uber
     config = YAML.load_file(uber)

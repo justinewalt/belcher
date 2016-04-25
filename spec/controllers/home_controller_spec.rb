@@ -30,4 +30,35 @@ RSpec.describe HomeController, type: :controller do
     end
   end
 
+  describe "No Results" do 
+    it "Gets no results from search" do 
+      get :noresults
+      expect(response).to redirect_to(root_path)
+    end
+  end
+
+  describe "Gone through all results" do 
+    it "redirects when out of options" do 
+      get :foodout
+      expect(response).to redirect_to(root_path)
+    end
+  end
+
+  describe "Loader IO" do 
+    it "renders text for loader io" do 
+      get :loader
+      expect(response.status).to eq(200) 
+    end
+  end
+
+  describe "Recents" do 
+    before(:each) do 
+    @params = {name: 'name', address: 'address', rating: 'rating', price: 'price' , picture: 'picture', user_id: 2}
+    end
+    it "Gets recents for users" do
+      get :recents, @params, format: :json
+      expect(response.status).to eq(200)
+    end
+  end
+
 end

@@ -25,11 +25,6 @@ class HomeController < ApplicationController
     render json: {filtered_spots: filtered_spots, origin: @origin}
   end
 
-  def autocomplete
-    @results = @client.spots_by_query(params[:input])
-    render json: @results
-  end
-
   def foodout
     flash[:notice] = "Oh, no! Out of choices, search again."
     redirect_to root_path
