@@ -56,8 +56,6 @@ class SearchIndex extends React.Component {
   getSpots(e) {
     e.preventDefault();
     if (this.refs.searchBar.value === "") {
-      this.state.searchValue.push("restaurant");
-    } else {
       this.state.searchValue.push(`${this.refs.searchBar.value}|`);
     }
     this.state.yes = false;
