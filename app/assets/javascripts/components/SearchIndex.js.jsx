@@ -130,7 +130,7 @@ class SearchIndex extends React.Component {
                      <p>Find Me Food</p>
                    </div>
       }else {
-        findFood = <div className="find-food-button find-food-button-disabled offset-by-four three columns">
+        findFood = <div className="find-food-button find-food-button-disabled offset-by-four four columns">
                      <p>Loading Location...</p>
                    </div>
       }
