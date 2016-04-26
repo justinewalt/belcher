@@ -33,7 +33,6 @@ group :development, :test do
   gem 'faker', '1.6.3'
   gem 'populator', '1.0.0'
   gem 'rspec-rails', '3.4.2'
-  gem 'better_errors', '2.1.1'
   gem 'awesome_print', '1.6.1'
 end
 
