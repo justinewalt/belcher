@@ -9,14 +9,14 @@ class About extends React.Component {
         <h3 className="text-center">About</h3>
           <div className="container about-text">
             <p>What is Belcher?</p>
-            <p>Belcher is your solution to the everday question, 
-            "Where should I/we eat?"  The reason why we created Belcher was to eliminate 
-            the issue of choice overload.  Belcher was created to be 
-            adpative, quick, and trust-worthy.  The application takes your prefered food
-            choices and responses, then determines the best place to eat without overwhelming the user.  
-            What makes Belcher unique, innovative, and beautiful?  
+            <p>Belcher is your solution to the everyday question, 
+            "Where should we eat?"  The reason we created Belcher was to eliminate 
+            the issue of choice overload--to be 
+            adaptive, quick and trustworthy.  We take your preferred food
+            choices, then provide the perfect place to get your grub on!  
+            What makes Belcher so unique and innovative?  
             Belcher responds to your feedback. Belcher is direct,
-            percise, and appeals to your tastebuds.</p>
+            precise and appeals to your tastebuds.</p>
             <p>Special thanks to <a href="http://www.devpointlabs.com/" target="_blank">DevPoint Labs!</a></p>
             <p>Enjoy!</p>
           </div>
