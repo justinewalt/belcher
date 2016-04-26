@@ -7,11 +7,19 @@
     font-size: 1em;
     height: 50px;
   }
+
+  .popular-cuisines {
+    font-size: 1em;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 400px){
   .nav-link {
     display: none;
+  }
+
+  .popular-cuisines {
+    font-size: 1.2em;
   }
 
   .search-index-buttons button {
