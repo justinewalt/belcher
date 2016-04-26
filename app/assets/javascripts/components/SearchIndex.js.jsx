@@ -124,11 +124,11 @@ class SearchIndex extends React.Component {
     if(this.state.searched === false) {
       let findFood;
       if(this.state.lat){
-        findFood = <div onClick={this.getSpots} className="find-food-button offset-by-four four columns">
+        findFood = <div onClick={this.getSpots} className="find-food-button offset-by-three six columns">
                      <p>Find Me Food</p>
                    </div>
       }else {
-        findFood = <div className="find-food-button find-food-button-disabled offset-by-four four columns">
+        findFood = <div className="find-food-button find-food-button-disabled offset-by-three six columns">
                      <p>Loading Location...</p>
                    </div>
       }
