@@ -9,10 +9,11 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :username
 
   def self.from_omniauth(facebook_info)
+    facebook_email = facebook_info.info.email
     where(provider: facebook_info.provider, uid: facebook_info.uid).first_or_create do |user|
-      user.email = facebook_info.info.email
+      user.email = facebook_email
       user.password = Devise.friendly_token
-      user.username = facebook_info.email
+      user.username = facebook_email
     end
   end
 end
