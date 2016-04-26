@@ -1,13 +1,16 @@
 .footer{
   border-top: 1px solid #c99c14;
-  position:fixed;
-  height: 30px;
+  position: fixed;
+  height: 35px;
   background-color:black;
-  bottom:0px;
-  left:0px;
-  right:0px;
-  margin-bottom:0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   min-width: 320px;
+}
+
+.copy-links {
+  margin: 0 0 0 10px;
 }
 
 .copy {
@@ -19,33 +22,23 @@
   display: inline;
 }
 
-.copy p {
-  display: inline;
-  margin: 0 5px 0 5px
-}
-
 .footer-links {
   float: right;
-  margin-right: 40px;
-}
-
-.footer-links-div {
-  display: inline-block;
+  margin-right: 10px;
 }
 
 .social-links {
-  margin-top: -47px;
+  padding: 0;
+  margin: 0 0 0 30px;
   display: inline-block;
 }
 
 .social-share-button-facebook {
  display: inline-block;
- float: right;
 }
 
 .social-share-button-twitter {
   display: inline-block;
-  float:right;
 }
 
 /* IE 6 */

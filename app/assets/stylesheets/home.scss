@@ -2,6 +2,7 @@ body {
   background-color: #444;
   margin: 0;
   min-width: 320px;
+  height: calc(100% - 40px);
 }
 
 a {
@@ -10,23 +11,6 @@ a {
 
 .text-center {
   text-align: center;
-}
-
-.subject-input {
-  width: 100%;
-  margin-bottom: 4px;
-}
-
-.message-input {
-  width: 100%;
-  height: 140px;
-  resize: none;
-}
-
-.map_div {
-  margin-top: 100px;
-  width: 46%;
-  background-color: #efefef;
 }
 
 button {

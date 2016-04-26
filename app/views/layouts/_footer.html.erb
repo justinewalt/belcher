@@ -2,15 +2,15 @@
   <div class="footer twelve columns">
     <div class="footer-links-div twelve columns">
       <ul class="copy copy-links">
-        <p><a href='/'><li>&copy BelcherApp</li></a></p>
+        <li><a href='/'><li>&copy BelcherApp</li></a></li>
       </ul>
       <ul class="copy footer-links">
-        <p><a href='/contact'><li>Contact</li></a></p>
-        <p><a href='/about'><li>About</li></a></p>
+        <li><a href='/contact'><li>Contact</li></a></li>
+        <li><a href='/about'><li>About</li></a></li>
       </ul>
-    </div>
-    <div class="social-links two columns offset-by six">
-      <%= social_share_button_tag(@posts, :url => "http://belcher.herokuapp.com", :popup => "true") %>
+      <ul class="copy social-links">
+        <li><%= social_share_button_tag(@posts, :url => "http://belcher.herokuapp.com", :popup => "true") %></li>
+      </ul>
     </div>
   </div>
 </div>
