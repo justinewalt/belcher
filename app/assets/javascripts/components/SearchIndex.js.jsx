@@ -56,11 +56,11 @@ class SearchIndex extends React.Component {
   getSpots(e) {
     e.preventDefault();
     if (this.refs.searchBar.value === "") {
-      this.state.searchValue.push("restaurant")
+      this.state.searchValue.push("restaurant");
     } else {
-      this.state.searchValue.push (`${this.refs.searchBar.value}|`);
+      this.state.searchValue.push(`${this.refs.searchBar.value}|`);
     }
-    this.state.yes = false
+    this.state.yes = false;
     $.ajax({
       url: '/search',
       type: 'GET',
@@ -71,14 +71,14 @@ class SearchIndex extends React.Component {
             lng: this.state.lng}
     }).done(data => {
       if (data.filtered_spots.length == 0) {
-        window.location.assign('/noresults')
+        window.location.assign('/noresults');
       } else {
       this.setState({results: data.filtered_spots, search: "",
                     result: data.filtered_spots[Math.floor(Math.random()*data.filtered_spots.length)],
                     origin: data.origin, distance_to: data.distance_to, time_to: data.time_to, searched: true})
       }
     }).fail(data => {
-      console.log("Search Error")
+      console.log("Search Error");
     });
   }
 
