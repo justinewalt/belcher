@@ -1,14 +1,19 @@
-website:
-#belcher.herokuapp.com
+##website:
+[Belcher](belcher.herokuapp.com)
 
-Team:
-#Justin Ewalt
+##Team:
+###Justin Ewalt
+[Github](https://github.com/justinewalt)
 
-#Brandon Huynh
+###Brandon Huynh
+[Github](https://github.com/brandonvhuynh)
 
-#Gavyn Caldwell
+###Gavyn Caldwell
+[Github](https://github.com/GavMan1995)
 
-#Garrett Stott
+###Garrett Stott
+[Github](https://github.com/garrettstott)
 
-Special Thanks To:
-#Devpoint Labs
+##Special Thanks To:
+###Devpoint Labs
+[DevPoint Labs](devpointlabs.com)
