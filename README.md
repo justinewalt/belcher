@@ -16,4 +16,4 @@
 
 #Special Thanks To:
 ###Devpoint Labs
-[DevPoint Labs](devpointlabs.com)
+[DevPoint Labs](http://www.devpointlabs.com)
