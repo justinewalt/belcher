@@ -21,9 +21,10 @@ ___
 #Special Thanks To:
 
 ###[DevPoint Labs](http://www.devpointlabs.com)
-####Dave Jungst
-####Jake Sorce
+###Dave Jungst
+###Jake Sorce
 ####Christian Fuller
 ####Rosie Thomas
 ####James Yeates
 ####Parker Bond
+####Natasha Mays
