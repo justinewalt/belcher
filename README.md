@@ -1,7 +1,7 @@
-##website:
+#website:
 [Belcher](belcher.herokuapp.com)
 
-##Team:
+#Team:
 ###Justin Ewalt
 [Github](https://github.com/justinewalt)
 
@@ -14,6 +14,6 @@
 ###Garrett Stott
 [Github](https://github.com/garrettstott)
 
-##Special Thanks To:
+#Special Thanks To:
 ###Devpoint Labs
 [DevPoint Labs](devpointlabs.com)
