@@ -49,7 +49,7 @@ class About extends React.Component {
                <i className="contact-fa fa fa-github"></i></a>
               <a href="https://www.linkedin.com/in/gavyn-caldwell-207160112" target="_blank">
                <i className="contact-fa fa fa-linkedin-square"></i></a>
-               <i className="contact-fa fa fa-globe"></i>
+               <a href="http://www.gavyncaldwell.com/" target="_blank"><i className="contact-fa fa fa-globe"></i></a>
             </div>
           <div className="about-info three columns">
             <h4 className="about-first">Garrett</h4>
