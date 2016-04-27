@@ -1,11 +1,11 @@
-# belcher.herokuapp.com
+#belcher.herokuapp.com
 
-# Justin Ewalt
+#Justin Ewalt
 
-# Brandon Huynh
+#Brandon Huynh
 
-# Gavyn Caldwell
+#Gavyn Caldwell
 
-# Garrett Stott
+#Garrett Stott
 
-# Devpoint Labs
+#Devpoint Labs
