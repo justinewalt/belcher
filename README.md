@@ -17,10 +17,8 @@
 #Special Thanks To:
 ###Devpoint Labs
 [DevPoint Labs](http://www.devpointlabs.com)
-###Dave Jungst
-[DevPoint Labs](http://www.devpointlabs.com)
-###Jake Sorce
-[DevPoint Labs](http://www.devpointlabs.com)
+####Dave Jungst
+####Jake Sorce
 ####Christian Fuller
 ####Rosie Thomas
 ####James Yeates
