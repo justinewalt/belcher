@@ -38,6 +38,18 @@
     height: 250px;
     overflow: hidden;
   }
+
+  .result-name {
+    font-size: 1.4em;
+  }
+
+  .map-div-text {
+    font-size: 1em;
+  }
+
+  .price-rating {
+    font-size: 1em;
+  }
 }
 
 @media (min-width: 401px) and (max-width: 700px){
@@ -58,6 +70,18 @@
     width: 350px;
     height: 350px;
     overflow: hidden;
+  }
+
+  .result-name {
+    font-size: 1.6em;
+  }
+
+  .map-div-text {
+    font-size: 1.2em;
+  }
+
+  .price-rating {
+    font-size: 1.1em;
   }
 }
 
@@ -105,8 +129,8 @@
   }
 
   .map_frame {
-    width: 600px;
-    height: 600px;
+    width: 350px;
+    height: 350px;
   }
 
   .result_image {
