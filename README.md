@@ -18,4 +18,6 @@
 ###Devpoint Labs
 [DevPoint Labs](http://www.devpointlabs.com)
 ###Dave Jungst
+[Github](https://github.com/wdjungst)
 ###Jake Sorce
+[Github](https://github.com/jakesorce)
