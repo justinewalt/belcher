@@ -21,3 +21,6 @@
 [DevPoint Labs](http://www.devpointlabs.com)
 ###Jake Sorce
 [DevPoint Labs](http://www.devpointlabs.com)
+####Christian Fuller
+####Rosie Thomas
+####James Yeates
