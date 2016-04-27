@@ -20,8 +20,7 @@ ___
 
 #Special Thanks To:
 
-###Devpoint Labs
-[DevPoint Labs](http://www.devpointlabs.com)
+###[DevPoint Labs](http://www.devpointlabs.com)
 ####Dave Jungst
 ####Jake Sorce
 ####Christian Fuller
