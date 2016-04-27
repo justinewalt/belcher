@@ -1,5 +1,5 @@
 #website:
-[Belcher](belcher.herokuapp.com)
+[Belcher](https://belcher.herokuapp.com)
 
 #Team:
 ###Justin Ewalt
