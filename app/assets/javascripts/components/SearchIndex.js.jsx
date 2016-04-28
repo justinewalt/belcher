@@ -78,7 +78,7 @@ class SearchIndex extends React.Component {
                     origin: data.origin, distance_to: data.distance_to, time_to: data.time_to, searched: true})
       }
     }).fail(data => {
-      console.log("Search Error");
+      console.log(data);
     });
   }
 
